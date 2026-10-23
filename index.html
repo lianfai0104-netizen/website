@@ -1,126 +1,127 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bellevue Nursery (Est. 1956) & We Plant It For You. The Eastside's premier independent garden center, houseplant boutique, pottery destination, and professional landscape installation division in Bellevue, WA.">
-  <title>Bellevue Nursery | Garden Center, Houseplants, Pottery &amp; We Plant It For You</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            forest: {
-              50: '#f2f7f4',
-              100: '#e1ede5',
-              200: '#c5dccc',
-              600: '#2d5a3f',
-              700: '#234732',
-              800: '#1b3727',
-              900: '#142a1e',
-            },
-            terracotta: {
-              100: '#faece8',
-              500: '#c86d51',
-              600: '#b45b40',
-              700: '#944731',
-            },
-            sand: {
-              50: '#fbfaf8',
-              100: '#f5f2ec',
-              200: '#ece6db',
-              800: '#5c5446',
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
-          }
-        }
-      }
+<style>
+    /* New Hero Backdrop using authentic Bellevue Nursery sunlit greenhouse interior */
+    .hero-pattern {
+        background: linear-gradient(115deg, rgba(16, 36, 25, 0.96) 0%, rgba(20, 42, 30, 0.88) 55%, rgba(20, 42, 30, 0.72) 100%),
+                    url('https://bellevuenursery.com/wp-content/uploads/2022/11/rsw_1440h_1440-1.webp') center/cover no-repeat;
     }
-  </script>
-  <style>
-    .glass-nav {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-    .tab-btn.active, .seasonal-filter-btn.active, .pill-btn.active {
-      background-color: #234732 !important;
-      color: #ffffff !important;
-      border-color: #234732 !important;
-    }
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      background: #234732;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-    }
-  </style>
-</head>
-<body id="top" class="font-sans bg-[#fdfbf7] text-stone-800 antialiased selection:bg-forest-100 selection:text-forest-900">
+</style>
 
-  <!-- Top Announcement Strip -->
-  <div class="bg-forest-900 text-white text-xs py-2 px-4 border-b border-forest-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-1.5 bg-forest-700 text-green-200 px-2 py-0.5 rounded text-[11px] font-semibold tracking-wide uppercase">
-          <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-          Established 1956
-        </span>
-        <span>842 104th Ave SE, Bellevue, WA 98004 • Open Daily 9:00 AM – 6:00 PM (Sun 10–5)</span>
-      </div>
-      <div class="flex items-center gap-6">
-        <span>City of Bellevue BCC 20.20 Tree Permit Compliant</span>
-        <a href="tel:4254545531" class="font-bold text-amber-200 hover:text-white transition-colors">Store Desk: (425) 454-5531</a>
-      </div>
+<!-- Master Hero Section -->
+<section class="relative hero-pattern text-white py-20 lg:py-28 overflow-hidden">
+    <!-- Ambient Botanical Glow -->
+    <div class="absolute inset-0 bg-gradient-to-t from-forest-900 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Hero Copy -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-green-200 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>70 Years Growing With Bellevue, Medina &amp; The Greater Eastside</span>
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.12] tracking-tight">
+                    Bellevue's Heritage Garden Sanctuary &amp; Master Landscape Authority.
+                </h1>
+
+                <p class="text-base sm:text-lg text-emerald-100/90 leading-relaxed max-w-2xl font-normal">
+                    A multi-generational haven for urban gardeners, rare houseplant collectors, and Eastside estate landscapes. Explore our sunlit glasshouse of acclimatized tropicals and imported frost-proof ceramics—or partner with our specialized <strong class="text-white font-semibold">We Plant It For You</strong> arborist and landscape installation division.
+                </p>
+
+                <!-- Trust Chips -->
+                <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-2 max-w-xl">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center transform hover:-translate-y-0.5 transition-transform">
+                        <div class="text-xl sm:text-2xl font-bold text-white font-serif">Est. 1956</div>
+                        <div class="text-[11px] text-emerald-200/90 font-medium mt-0.5">Independent Nursery</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center transform hover:-translate-y-0.5 transition-transform">
+                        <div class="text-xl sm:text-2xl font-bold text-white font-serif">ISA Certified</div>
+                        <div class="text-[11px] text-emerald-200/90 font-medium mt-0.5">Arborists on Staff</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center transform hover:-translate-y-0.5 transition-transform">
+                        <div class="text-xl sm:text-2xl font-bold text-white font-serif">1-Year</div>
+                        <div class="text-[11px] text-emerald-200/90 font-medium mt-0.5">Plant Health Warranty</div>
+                    </div>
+                </div>
+
+                <!-- Hero CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#nursery" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2 text-sm">
+                        <span>Explore Nursery Departments</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <button id="heroConsultBtn" class="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl backdrop-blur-md transition-all text-center flex items-center justify-center gap-2 text-sm transform hover:-translate-y-0.5">
+                        <span>Book Landscape Feasibility Walk</span>
+                        <span>&rarr;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Store & Field Snapshot Card with Authentic Visual Window -->
+            <div class="lg:col-span-5">
+                <div class="bg-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden border border-white/40">
+                    
+                    <!-- Real Greenhouse Photography Banner -->
+                    <div class="relative h-44 overflow-hidden bg-forest-900">
+                        <img src="https://bellevuenursery.com/wp-content/uploads/2022/10/Peppers-Millet.jpg" alt="Bellevue Nursery Yard" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-forest-900/90 via-forest-900/40 to-transparent"></div>
+                        
+                        <!-- Badges in Banner -->
+                        <div class="absolute top-3 left-3 right-3 flex justify-between items-center">
+                            <span class="bg-forest-900/80 backdrop-blur-md text-emerald-200 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-forest-700">
+                                842 104th Ave SE
+                            </span>
+                            <span class="bg-emerald-500 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                                Open Today 9–6
+                            </span>
+                        </div>
+
+                        <div class="absolute bottom-3 left-4 right-4">
+                            <div class="text-[11px] font-bold uppercase tracking-widest text-amber-300">Bellevue Botanical Destination</div>
+                            <h3 class="font-serif text-lg font-bold text-white">Nursery Store &amp; We Plant It For You HQ</h3>
+                        </div>
+                    </div>
+
+                    <!-- Operational Details Body -->
+                    <div class="p-6 space-y-3.5 text-xs sm:text-sm">
+                        <div class="flex justify-between items-center py-1 border-b border-gray-100">
+                            <span class="text-gray-600 font-medium">Retail Store &amp; Greenhouse</span>
+                            <span class="font-bold text-forest-900 text-right">842 104th Ave SE, Bellevue</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1 border-b border-gray-100">
+                            <span class="text-gray-600 font-medium">Direct Store Desk</span>
+                            <a href="tel:4254545531" class="font-bold text-forest-800 hover:text-terracotta-600 transition-colors">(425) 454-5531</a>
+                        </div>
+                        <div class="flex justify-between items-center py-1 border-b border-gray-100">
+                            <span class="text-gray-600 font-medium">Installation Operations</span>
+                            <a href="tel:4254544417" class="font-bold text-forest-800 hover:text-terracotta-600 transition-colors">(425) 454-4417</a>
+                        </div>
+                        <div class="flex justify-between items-center py-1 border-b border-gray-100">
+                            <span class="text-gray-600 font-medium">Store Operating Hours</span>
+                            <span class="font-bold text-forest-900">Mon–Sat 9–6 • Sun 10–5</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1">
+                            <span class="text-gray-600 font-medium">City Permitting &amp; Lic.</span>
+                            <span class="font-mono text-xs font-bold text-gray-700">WA #BELLEVN842 • BCC 20.20</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Footer Bar -->
+                    <div class="px-6 py-4 bg-sand-100 border-t border-gray-200 flex items-center justify-between">
+                        <div>
+                            <div class="text-[11px] text-gray-500 font-medium">Planning exterior work?</div>
+                            <div class="text-xs font-bold text-forest-900">Arborist Feasibility Walk</div>
+                        </div>
+                        <a href="#estimator" class="text-xs font-bold text-terracotta-600 hover:text-terracotta-700 flex items-center gap-1">
+                            <span>Scope Guide</span>
+                            <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
-
-  <!-- Navigation Header -->
-  <header class="sticky top-0 z-40 glass-nav border-b border-stone-200 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
-        <!-- Brand / Logo -->
-        <a href="#top" id="brandLogo" class="flex items-center gap-3">
-          <img src="https://bellevuenursery.com/wp-content/uploads/2022/09/Bellevue-Text-Logo.jpg" alt="Bellevue Nursery" class="h-10 sm:h-12 w-auto object-contain rounded">
-          <div class="flex flex-col">
-            <span class="text-xl font-serif font-bold tracking-tight text-forest-900">BELLEVUE NURSERY</span>
-            <span class="text-[11px] font-semibold uppercase tracking-widest text-terracotta-600">
-              Garden Center, Houseplants &amp; "We Plant It For You" Division
-            </span>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-stone-700">
-          <a href="#seasonal" class="hover:text-forest-700 transition-colors font-semibold text-terracotta-600 flex items-center gap-1"><span>🍂 Seasonal Arrivals</span></a>
-          <a href="#nursery" class="hover:text-forest-700 transition-colors">Nursery &amp; Plants</a>
-          <a href="#pottery" class="hover:text-forest-700 transition-colors">Pottery &amp; Pots</a>
-          <a href="#supplies" class="hover:text-forest-700 transition-colors">Organic Soils</a>
-          <a href="#we-plant" class="hover:text-forest-700 transition-colors font-bold text-forest-800">We Plant It For You</a>
-          <a href="#estimator" class="hover:text-forest-700 transition-colors flex items-center gap-1">
-            <span>Project Planning</span>
-            <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-1.5 py-0.5 rounded">Live</span>
-          </a>
-          <a href="#potting-bar" class="hover:text-forest-700 transition-colors">Potting Bar</a>
-          <a href="#holiday" class="hover:text-forest-700 transition-colors">Holiday Greens</a>
-          <a href="#clinics" class="hover:text-forest-700 transition-colors">Clinics</a>
-          <a href="#contact" class="hover:text-forest-700 transition-colors">Hours &amp; Location</a>
-        </nav>
-
-        <!-- Actions -->
-        <div class="hidden sm:flex items-center gap-4">
-          <div class="text-right">
-            <div class="text-[11px] text-stone-500 font-medium uppercase tracking-wider">Direct Store Desk</div>
-            <a href="tel:4254545531" class="text-sm font-bold text-forest-900 hover:text-terracotta-600 transition-colors">(425) 454-5531</a>
-          </div>
-          <button id="navBookBtn" class="bg-forest-700 hover:bg-forest-80
+</section>
