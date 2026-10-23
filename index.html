@@ -94,10 +94,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Brand / Logo -->
-                <a href="#top" id="brandLogo" class="flex flex-col">
-                    <div class="flex items-center gap-2">
-                        <span class="text-2xl font-serif font-bold tracking-tight text-forest-900">BELLEVUE NURSERY</span>
-                    </div>
+                <a href="#top" id="brandLogo" class="flex items-center gap-3">
+                    <img src="https://bellevuenursery.com/wp-content/uploads/2022/09/Bellevue-Text-Logo.jpg" alt="Bellevue Nursery" class="h-10 sm:h-12 w-auto object-contain rounded">
+                    <div class="flex flex-col">
+                        <span class="text-xl font-serif font-bold tracking-tight text-forest-900">BELLEVUE NURSERY</span>
                     <span class="text-[11px] font-semibold uppercase tracking-widest text-terracotta-600">
                         Garden Center, Houseplants &amp; "We Plant It For You" Division
                     </span>
@@ -105,6 +105,7 @@
 
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-gray-700">
+                    <a href="#seasonal" class="hover:text-forest-700 transition-colors font-semibold text-terracotta-600 flex items-center gap-1"><span>🍂 Seasonal Arrivals</span></a>
                     <a href="#nursery" class="hover:text-forest-700 transition-colors">Nursery &amp; Plants</a>
                     <a href="#pottery" class="hover:text-forest-700 transition-colors">Pottery &amp; Pots</a>
                     <a href="#supplies" class="hover:text-forest-700 transition-colors">Organic Soils</a>
@@ -141,6 +142,7 @@
 
         <!-- Mobile Dropdown -->
         <div id="mobileMenu" class="hidden xl:hidden border-b border-gray-200 bg-white px-4 pt-3 pb-6 space-y-3 max-h-[85vh] overflow-y-auto">
+            <a href="#seasonal" class="mobile-nav-link block py-2 text-base font-bold text-terracotta-600">🍂 Seasonal Plants &amp; New Arrivals</a>
             <a href="#nursery" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">Nursery &amp; Houseplants</a>
             <a href="#pottery" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">Glazed Pottery &amp; Planters</a>
             <a href="#supplies" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">Organic Soils &amp; Tool Shed</a>
@@ -261,6 +263,233 @@
         </div>
     </section>
 
+    
+    <!-- SECTION 0B: MODULAR SEASONAL PLANTS & FRESH ARRIVALS SHOWCASE -->
+    <section id="seasonal" class="py-20 bg-sand-100/90 border-b border-gray-200 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header & Staff Admin Bar -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-terracotta-100 text-terracotta-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+                        <span>🍂 Fresh Nursery Drops • Current Season</span>
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900">
+                        In Bloom &amp; Just Arrived at Bellevue Nursery
+                    </h2>
+                    <p class="text-gray-600 text-sm mt-2 max-w-2xl leading-relaxed">
+                        Hand-selected weekly for Pacific Northwest microclimates. Acclimatized for Eastside clay soil, Puget Sound rainfall, and indoor autumn living.
+                    </p>
+                </div>
+
+                <!-- Easy Staff Quick-Update Trigger -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                    <span class="text-xs text-gray-500 font-medium">Rotation: <strong id="activeSeasonLabel" class="text-forest-800">Late Fall &amp; Pre-Winter</strong></span>
+                    <button id="openSeasonalManagerBtn" class="inline-flex items-center gap-2 bg-white hover:bg-forest-50 text-forest-800 text-xs font-bold px-3.5 py-2 rounded-xl border border-forest-300 shadow-sm hover:shadow transition-all group">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 group-hover:scale-125 transition-transform"></span>
+                        <span>⚙️ Staff: Quick Seasonal Plant Updater</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-10 border-b border-gray-200/80 pb-4">
+                <button class="seasonal-filter-btn active px-4 py-2 rounded-xl text-xs font-bold border border-forest-700 bg-forest-700 text-white transition-all" data-filter="all">
+                    All Featured Arrivals (<span id="count-all">6</span>)
+                </button>
+                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="fall-color">
+                    🍂 Fall Color &amp; Bulbs
+                </button>
+                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="tropicals">
+                    🌿 Indoor Tropicals
+                </button>
+                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="trees">
+                    🍁 Specimen Trees &amp; Shrubs
+                </button>
+                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="pottery">
+                    🏺 Glazed Pottery Drops
+                </button>
+            </div>
+
+            <!-- Dynamic Seasonal Card Grid -->
+            <div id="seasonalCardGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards will be populated by JavaScript for instant updates -->
+            </div>
+
+            <!-- Bottom Customer Assistance Callout -->
+            <div class="mt-14 p-6 sm:p-8 bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-forest-100 text-forest-800 flex items-center justify-center text-2xl shrink-0">
+                        🌱
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg font-bold text-forest-900">Looking for a specific PNW plant or rare cultivar?</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Our greenhouse buyer Jess Hui and nursery specialists receive fresh grower shipments every Tuesday &amp; Thursday.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 shrink-0">
+                    <a href="tel:4254545531" class="text-xs font-bold bg-forest-700 hover:bg-forest-800 text-white px-5 py-2.5 rounded-xl transition-colors">
+                        Call Store Desk: (425) 454-5531
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODAL: STAFF QUICK SEASONAL PLANT UPDATER -->
+    <div id="seasonalManagerModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl border border-gray-200 max-h-[92vh] flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center border-b border-gray-100 pb-4 mb-4 shrink-0">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-terracotta-600">Bellevue Nursery Admin Tool</span>
+                    <h3 class="font-serif text-2xl font-bold text-forest-900">Quick Seasonal Plant &amp; Block Updater</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">Easily update seasonal arrivals, rotate quarterly collections, or switch inventory presets without coding.</p>
+                </div>
+                <button id="closeSeasonalModalBtn" class="text-gray-400 hover:text-gray-600 p-2 text-2xl leading-none">&times;</button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div class="overflow-y-auto space-y-6 pr-1 flex-1">
+                
+                <!-- Preset Quick Switcher -->
+                <div class="p-4 bg-sand-100 rounded-2xl border border-gray-200">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-forest-800">1-Click Seasonal Rotation Presets</span>
+                            <div class="text-xs text-gray-600">Switch the entire seasonal showcase to a curated seasonal theme in one click:</div>
+                        </div>
+                        <div class="flex items-center gap-2 w-full sm:w-auto">
+                            <select id="seasonPresetSelect" class="bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs font-semibold text-gray-800 focus:ring-2 focus:ring-forest-600">
+                                <option value="fall" selected>🍂 Autumn Color &amp; Bulbs (Current)</option>
+                                <option value="holiday">🎄 Holiday Greens &amp; Fir Trees (Nov–Dec)</option>
+                                <option value="spring">🌸 Spring Awakening &amp; Bulbs (Jan–April)</option>
+                                <option value="summer">☀️ Summer Blooms &amp; Patio (May–Aug)</option>
+                            </select>
+                            <button id="applyPresetBtn" class="bg-forest-700 hover:bg-forest-800 text-white font-bold text-xs px-4 py-2 rounded-xl transition-colors shrink-0">
+                                Apply Preset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card List / Editor Table -->
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-forest-900">Active Showcase Blocks (<span id="modalActiveCount">6</span> Items)</span>
+                        <button id="addNewCardBtn" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs px-3.5 py-1.5 rounded-lg transition-colors flex items-center gap-1">
+                            <span>+ Add Seasonal Item</span>
+                        </button>
+                    </div>
+
+                    <div id="seasonalItemsList" class="space-y-3">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Edit / Add Single Card Form (Hidden by default until edit or add clicked) -->
+                <div id="cardEditFormContainer" class="hidden p-5 bg-sand-50 rounded-2xl border border-forest-200 space-y-4">
+                    <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                        <h4 id="editFormTitle" class="font-serif font-bold text-forest-900 text-base">Edit Seasonal Block</h4>
+                        <button id="cancelEditBtn" class="text-xs font-semibold text-gray-500 hover:text-gray-700">Cancel</button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Common Plant / Product Name *</label>
+                            <input type="text" id="editCardName" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="e.g. Bloodgood Japanese Maple">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Botanical Subheading / Variety</label>
+                            <input type="text" id="editCardBotanical" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="e.g. Acer palmatum 'Bloodgood'">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Badge / Seasonal Tag</label>
+                            <select id="editCardBadge" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold">
+                                <option value="🍂 In Season Now">🍂 In Season Now</option>
+                                <option value="🌿 Cascade Tropicals Drop">🌿 Cascade Tropicals Drop</option>
+                                <option value="🌸 Spring Arrival">🌸 Spring Arrival</option>
+                                <option value="❄️ Cold Hardy">❄️ Cold Hardy</option>
+                                <option value="🏺 Handcrafted Import">🏺 Handcrafted Import</option>
+                                <option value="⭐ Staff Favorite">⭐ Staff Favorite</option>
+                                <option value="🎄 Holiday Special">🎄 Holiday Special</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Category Filter</label>
+                            <select id="editCardCategory" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold">
+                                <option value="fall-color">🍂 Fall Color &amp; Bulbs</option>
+                                <option value="tropicals">🌿 Indoor Tropicals</option>
+                                <option value="trees">🍁 Specimen Trees &amp; Shrubs</option>
+                                <option value="pottery">🏺 Glazed Pottery Drops</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Display Price *</label>
+                            <input type="text" id="editCardPrice" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="e.g. $14.99 / 6-Pack or $285.00">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Sun &amp; Moisture Care Note</label>
+                            <input type="text" id="editCardCare" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="e.g. Full/Part Sun • Keep Moist • Hardy to -10°F">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Action Button Type</label>
+                            <select id="editCardAction" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold">
+                                <option value="pickup">Reserve for Express Pickup</option>
+                                <option value="potting">Pair at Potting Bar</option>
+                                <option value="weplant">Inquire / We Plant It For You</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Short Description / Eastside Garden Tips</label>
+                        <textarea id="editCardDesc" rows="2" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="Why Eastside gardeners love this plant and where to plant it..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Image URL</label>
+                        <input type="text" id="editCardImage" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-mono" placeholder="https://...">
+                    </div>
+
+                    <div class="flex justify-end gap-3 pt-2">
+                        <button type="button" id="saveCardBtn" class="bg-forest-700 hover:bg-forest-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-colors">
+                            Save Item to Showcase
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer Actions -->
+            <div class="pt-4 border-t border-gray-200 mt-4 flex flex-col sm:flex-row justify-between items-center gap-3 shrink-0">
+                <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <span>💡 Changes update live on your screen instantly.</span>
+                </div>
+                <div class="flex items-center gap-3 w-full sm:w-auto">
+                    <button id="resetDefaultsBtn" class="text-xs text-gray-500 hover:text-red-600 font-semibold px-3 py-2">
+                        Reset Defaults
+                    </button>
+                    <button id="copyCodeBtn" class="bg-sand-200 hover:bg-sand-300 text-forest-900 font-bold text-xs px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5">
+                        <span>📋 Copy Code for Ken / GitHub</span>
+                    </button>
+                    <button id="closeManagerAndSaveBtn" class="bg-forest-700 hover:bg-forest-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-colors">
+                        Done &amp; View Website
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <!-- SECTION 1: COMPLETE RETAIL NURSERY DEPARTMENTS -->
     <section id="nursery" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,7 +505,10 @@
                 <!-- Dept 1: Indoor Tropicals -->
                 <div class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-2xl mb-5">🌿</div>
+                        <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
+                        <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/ezgif.com-gif-maker-7-scaled-square.jpg" alt="Acclimatized Tropical Houseplants at Bellevue Nursery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2 py-0.5 rounded">Cascade Tropicals</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Indoor Plants &amp; Rare Tropicals</h3>
                         <p class="text-xs text-gray-600 leading-relaxed mb-4">
                             Acclimatized indoor foliage curated by buyer Jess Hui. Monsteras, Fiddle Leaf Figs, Sansevierias, rare Philodendrons, Hoyas, Ferns, and Air Plants.
@@ -296,7 +528,10 @@
                 <!-- Dept 2: Specimen Trees & Shrubs -->
                 <div class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="w-12 h-12 bg-forest-100 text-forest-800 rounded-xl flex items-center justify-center text-2xl mb-5">🍁</div>
+                        <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
+                        <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Rudbeckia-Denver-Daisy-square.jpg" alt="Seasonal Blooming Perennials & Trees at Bellevue Nursery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-amber-200 text-[10px] font-bold px-2 py-0.5 rounded">Outdoor Nursery Yard</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Specimen Trees &amp; PNW Shrubs</h3>
                         <p class="text-xs text-gray-600 leading-relaxed mb-4">
                             Urban-scale trees and landscape focal points tailored to King County soil: Weeping Japanese Maples, Flowering Cherries, Dwarf Conifers, Rhododendrons, and Hydrangeas.
@@ -316,7 +551,10 @@
                 <!-- Dept 3: Glazed Pottery & Containers -->
                 <div id="pottery" class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="w-12 h-12 bg-terracotta-100 text-terracotta-600 rounded-xl flex items-center justify-center text-2xl mb-5">🏺</div>
+                        <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
+                        <img src="https://bellevuenursery.com/wp-content/uploads/2022/11/ezgif.com-gif-maker-8.jpg" alt="Imported Frost-Proof Glazed Planters at Bellevue Nursery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-terracotta-200 text-[10px] font-bold px-2 py-0.5 rounded">Frost-Resistant High Fire</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Pots &amp; Architectural Containers</h3>
                         <p class="text-xs text-gray-600 leading-relaxed mb-4">
                             Direct-imported and domestic pottery from Washington Pottery Company and Accent Decor. High-fired frost-resistant glazed ceramics, Italian terracotta, and modern urns.
@@ -336,7 +574,10 @@
                 <!-- Dept 4: Soils & Amendments -->
                 <div id="supplies" class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="w-12 h-12 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center text-2xl mb-5">🌱</div>
+                        <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
+                        <img src="https://bellevuenursery.com/wp-content/uploads/2022/11/ezgif.com-gif-maker-6-1536x1014.jpg" alt="Organic Gardner & Bloome Soils and Amendments" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-green-200 text-[10px] font-bold px-2 py-0.5 rounded">100% Organic OMRI</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Organic Soils &amp; Amendments</h3>
                         <p class="text-xs text-gray-600 leading-relaxed mb-4">
                             The gold standard for Pacific Northwest clay soils: Gardner &amp; Bloome (GB) organic potting soil, composted chicken manure, bone meal, and natural starter fertilizers.
@@ -356,7 +597,10 @@
                 <!-- Dept 5: Garden Supplies & Tool Shed -->
                 <div class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="w-12 h-12 bg-blue-100 text-blue-800 rounded-xl flex items-center justify-center text-2xl mb-5">🛠️</div>
+                        <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
+                        <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Tool-Wall-2022-2-square.jpg" alt="Bellevue Nursery Tool Shed and Swiss Felco Tools" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-blue-200 text-[10px] font-bold px-2 py-0.5 rounded">The Tool Shed</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Garden Supplies &amp; Tool Shed</h3>
                         <p class="text-xs text-gray-600 leading-relaxed mb-4">
                             Pro-grade tools and remedies to keep your garden thriving: Swiss Felco pruners, organic pest/fungal solutions, watering wands, bamboo staking, and botanical gloves.
@@ -376,7 +620,10 @@
                 <!-- Dept 6: Boutique Gift Shop -->
                 <div class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="w-12 h-12 bg-purple-100 text-purple-800 rounded-xl flex items-center justify-center text-2xl mb-5">🎁</div>
+                        <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
+                        <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/MothersDay-2026-square.jpg" alt="Botanical Gift Shop & Decor at Bellevue Nursery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-purple-200 text-[10px] font-bold px-2 py-0.5 rounded">Gift Shop &amp; Accents</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Home Décor &amp; Botanical Gift Shop</h3>
                         <p class="text-xs text-gray-600 leading-relaxed mb-4">
                             Unique accents for living and garden spaces: tabletop concrete fire bowls, scented plant candles, botanical cards, accent wind chimes, and seasonal holiday gifts.
@@ -450,6 +697,21 @@
 
                 <!-- 3 Pillars Cards -->
                 <div class="lg:col-span-6 space-y-4">
+
+                    <!-- Real Bellevue Nursery Field Photo & Delivery Van Strip -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-sand-200 h-64 mb-6">
+                        <img src="https://bellevuenursery.com/wp-content/uploads/2026/07/qtq80-Aawkw2-1536x1024.jpeg" alt="Bellevue Nursery We Plant It For You Garden Installation" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-forest-900/90 via-forest-900/30 to-transparent flex items-end p-5">
+                            <div class="flex items-center gap-4">
+                                <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Delivery-Van-1-square.jpg" alt="Bellevue Nursery Delivery Van" class="w-14 h-14 rounded-xl object-cover border-2 border-white shadow">
+                                <div>
+                                    <div class="text-white font-bold text-sm">Eastside Delivery &amp; Turn-Key Planting</div>
+                                    <div class="text-emerald-200 text-xs">Direct from our 842 104th Ave SE yard to your garden beds.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex items-start gap-4">
                         <div class="w-12 h-12 bg-forest-100 text-forest-800 rounded-xl flex items-center justify-center text-2xl shrink-0">🌲</div>
                         <div>
@@ -1518,6 +1780,582 @@
                 openConsultModal('holiday', `Holiday Pre-Order ($50 Deposit): ${item}`);
             });
         });
+    
+        // =========================================================================
+        // BELLEVUE NURSERY MODULAR SEASONAL PLANTS & ARRIVALS ENGINE
+        // Designed for zero-code, instant updates by Fai Lian & Zaylee
+        // =========================================================================
+
+        // Default Autumn Preset Data
+        const SEASONAL_PRESETS = {
+            fall: [
+                {
+                    id: 'fall-pansies',
+                    name: 'Autumn Pansies & Violas',
+                    botanical: 'Viola cornuta • Cold-Hardy Color',
+                    badge: '🍂 In Season Now',
+                    badgeColor: 'bg-amber-100 text-amber-800 border-amber-300',
+                    category: 'fall-color',
+                    price: '$14.99 / 6-Pack',
+                    care: 'Full / Part Sun • Keep Moist • Frost Tolerant',
+                    desc: 'Vibrant autumn purples, bronzes, and yellows that bloom straight through Puget Sound November chills into spring.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg',
+                    action: 'pickup'
+                },
+                {
+                    id: 'bloodgood-maple',
+                    name: 'Bloodgood Japanese Maple',
+                    botanical: 'Acer palmatum var. atropurpureum (7-Gallon)',
+                    badge: '🍁 Peak Fall Color',
+                    badgeColor: 'bg-red-100 text-red-800 border-red-300',
+                    category: 'trees',
+                    price: '$285.00',
+                    care: 'Morning Sun / Filtered Shade • Moist, Well-Drained Soil',
+                    desc: 'Stunning deep scarlet autumn canopy. Acclimatized for Eastside garden scale and eligible for "We Plant It For You".',
+                    image: 'https://images.unsplash.com/photo-1507290439931-a861b5a38200?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                },
+                {
+                    id: 'cascade-fiddle',
+                    name: 'Cascade Fiddle Leaf Fig',
+                    botanical: 'Ficus lyrata • Acclimatized (8" Nursery Pot)',
+                    badge: '🌿 Cascade Tropicals Drop',
+                    badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-300',
+                    category: 'tropicals',
+                    price: '$48.00',
+                    care: 'Bright Indirect Light • Water When Top 2" Dry',
+                    desc: 'Pest-inspected, healthy greenhouse specimen ready for living room elegance. Pair directly at our in-store Potting Bar.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/ezgif.com-gif-maker-7-scaled-square.jpg',
+                    action: 'potting'
+                },
+                {
+                    id: 'dutch-tulip-bulbs',
+                    name: 'Dutch Spring Flowering Bulbs',
+                    botanical: 'Tulipa & Narcissus • Netherland Bulb Co.',
+                    badge: '🍂 Plant Now for Spring',
+                    badgeColor: 'bg-purple-100 text-purple-800 border-purple-300',
+                    category: 'fall-color',
+                    price: '$18.50 / Bag (20 Bulbs)',
+                    care: 'Plant in October/November • Cold Hardy',
+                    desc: 'Premium Dutch import bulbs ready for autumn planting in King County soil. Spectacular April bloom guaranteed.',
+                    image: 'https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=800&q=80',
+                    action: 'pickup'
+                },
+                {
+                    id: 'italian-glazed-pot',
+                    name: 'Glazed Cylinder Ceramic Set',
+                    botanical: 'Washington Pottery Co. • High-Fired Cobalt (S/3)',
+                    badge: '🏺 Just Unpacked',
+                    badgeColor: 'bg-blue-100 text-blue-800 border-blue-300',
+                    category: 'pottery',
+                    price: '$36.00',
+                    care: 'Frost-Resistant High Fire • Built-in Saucer',
+                    desc: 'Thick-walled glazed ceramic engineered to prevent winter frost cracking. Fai frozen-price guarantee at $36.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/2022/11/ezgif.com-gif-maker-8.jpg',
+                    action: 'potting'
+                },
+                {
+                    id: 'autumn-conifer',
+                    name: 'Dwarf Hinoki Cypress',
+                    botanical: 'Chamaecyparis obtusa (3-Gallon)',
+                    badge: '🌲 Evergreen Architectural',
+                    badgeColor: 'bg-forest-100 text-forest-800 border-forest-300',
+                    category: 'trees',
+                    price: '$85.00',
+                    care: 'Full Sun to Part Shade • Evergreen Texture',
+                    desc: 'Graceful fan-shaped foliage providing sculptural emerald structure to Eastside courtyards and container groupings.',
+                    image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                }
+            ],
+            holiday: [
+                {
+                    id: 'holiday-noble-wreath',
+                    name: 'Hand-Tied Noble Fir Wreath (24")',
+                    botanical: 'Locally Harvested Abies procera',
+                    badge: '🎄 Holiday Signature',
+                    badgeColor: 'bg-red-100 text-red-800 border-red-300',
+                    category: 'fall-color',
+                    price: '$45.00',
+                    care: 'Outdoor Door / Porch • Mist Weekly',
+                    desc: 'Fresh Pacific Northwest noble fir, fragrant cedar tips, juniper berries, and real pine cones hand-crafted at our yard.',
+                    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80',
+                    action: 'pickup'
+                },
+                {
+                    id: 'winter-porch-pot',
+                    name: 'Classic Bellevue Porch Pot (18")',
+                    botanical: 'Noble Fir, Cedar & Birch Accents',
+                    badge: '⭐ Most Popular',
+                    badgeColor: 'bg-amber-100 text-amber-800 border-amber-300',
+                    category: 'fall-color',
+                    price: '$195.00 ($50 Deposit)',
+                    care: 'Outdoor Display • Lasts Through January',
+                    desc: 'Stunning architectural container display with tall white birch poles and red dogwood branches.',
+                    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+                    action: 'pickup'
+                },
+                {
+                    id: 'amaryllis-gift',
+                    name: 'Jumbo Dutch Amaryllis in Ceramic',
+                    botanical: 'Hippeastrum 'Red Lion' • Wax / Potted',
+                    badge: '🎁 Living Gift',
+                    badgeColor: 'bg-purple-100 text-purple-800 border-purple-300',
+                    category: 'tropicals',
+                    price: '$32.00',
+                    care: 'Bright Indoor Light • 6–8 Week Giant Blooms',
+                    desc: 'Giant double-flowering red amaryllis bulb potted in glazed artisan ceramic. Perfect seasonal holiday gift.',
+                    image: 'https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&w=800&q=80',
+                    action: 'potting'
+                },
+                {
+                    id: 'noble-fir-tree',
+                    name: 'Fresh-Cut Washington Noble Fir',
+                    botanical: '7ft–8ft Grade-A Puget Sound Fir',
+                    badge: '🌲 Pre-Order Allocation',
+                    badgeColor: 'bg-forest-100 text-forest-800 border-forest-300',
+                    category: 'trees',
+                    price: '$95.00',
+                    care: 'Water Stand Conditioned Daily',
+                    desc: 'Hand-picked dense symmetrical boughs. Fresh cut on-site and loaded directly onto your vehicle by our team.',
+                    image: 'https://images.unsplash.com/photo-1543257580-7269da773bf5?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                }
+            ],
+            spring: [
+                {
+                    id: 'spring-hellebore',
+                    name: 'Winter Jewel Hellebores',
+                    botanical: 'Helleborus orientalis (Lenten Rose)',
+                    badge: '🌸 Early Spring Bloom',
+                    badgeColor: 'bg-pink-100 text-pink-800 border-pink-300',
+                    category: 'fall-color',
+                    price: '$24.99',
+                    care: 'Part to Full Shade • Evergreen Perennial',
+                    desc: 'Lush nodding blooms in deep plum, slate, and blush that flower when snow is still in the air. Slug-resistant.',
+                    image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80',
+                    action: 'pickup'
+                },
+                {
+                    id: 'spring-primrose',
+                    name: 'Pacific Northwest Primroses',
+                    botanical: 'Primula acaulis (4" Pots)',
+                    badge: '🌸 Bright Color Drops',
+                    badgeColor: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+                    category: 'fall-color',
+                    price: '$4.99 each',
+                    care: 'Morning Sun • Keep Consistently Moist',
+                    desc: 'Intense saturated neon colors that announce spring has arrived in Bellevue. Ideal for porch accents.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg',
+                    action: 'pickup'
+                },
+                {
+                    id: 'spring-rhody',
+                    name: 'Specimen Pacific Rhododendron',
+                    botanical: 'Rhododendron 'Cynthia' (5-Gallon)',
+                    badge: '🌺 Washington State Flower',
+                    badgeColor: 'bg-purple-100 text-purple-800 border-purple-300',
+                    category: 'trees',
+                    price: '$68.00',
+                    care: 'Acidic PNW Soil • Morning Sun / Filtered Shade',
+                    desc: 'Huge rosy-crimson trusses. Native soil-adapted and perfect for woodland shade gardens.',
+                    image: 'https://images.unsplash.com/photo-1507290439931-a861b5a38200?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                }
+            ],
+            summer: [
+                {
+                    id: 'summer-hydrangea',
+                    name: 'Endless Summer Hydrangea',
+                    botanical: 'Hydrangea macrophylla (5-Gallon)',
+                    badge: '☀️ Continuous Summer Blooms',
+                    badgeColor: 'bg-blue-100 text-blue-800 border-blue-300',
+                    category: 'trees',
+                    price: '$58.00',
+                    care: 'Morning Sun / Afternoon Shade • Generous Water',
+                    desc: 'Re-blooming mophead hydrangea with giant blue or pink blooms depending on soil pH. Bellevue summer classic.',
+                    image: 'https://images.unsplash.com/photo-1507290439931-a861b5a38200?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                },
+                {
+                    id: 'summer-patio-basket',
+                    name: 'Grand Sunburst Hanging Basket',
+                    botanical: 'Calibrachoa, Petunia & Trailing Verbena',
+                    badge: '⭐ Bellevue Nursery Signature',
+                    badgeColor: 'bg-amber-100 text-amber-800 border-amber-300',
+                    category: 'fall-color',
+                    price: '$65.00',
+                    care: 'Full Sun • Daily Summer Watering',
+                    desc: 'Massive trailing color grown right here in our greenhouse. Hummingbird magnet.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg',
+                    action: 'pickup'
+                }
+            ]
+        };
+
+        // Load active items from localStorage or fallback to Fall default
+        let activeSeasonalItems = [];
+        try {
+            const saved = localStorage.getItem('bn_seasonal_items');
+            if (saved) {
+                activeSeasonalItems = JSON.parse(saved);
+            } else {
+                activeSeasonalItems = [...SEASONAL_PRESETS.fall];
+            }
+        } catch (e) {
+            activeSeasonalItems = [...SEASONAL_PRESETS.fall];
+        }
+
+        let currentSeasonalFilter = 'all';
+        let editingCardIndex = -1;
+
+        // Render Cards in the Frontend Grid
+        function renderSeasonalGrid() {
+            const grid = document.getElementById('seasonalCardGrid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            const filtered = activeSeasonalItems.filter(item => {
+                if (currentSeasonalFilter === 'all') return true;
+                return item.category === currentSeasonalFilter;
+            });
+
+            document.getElementById('count-all').textContent = activeSeasonalItems.length;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 bg-white rounded-2xl border border-gray-200">
+                        <div class="text-3xl mb-2">🌿</div>
+                        <h4 class="font-serif text-lg font-bold text-forest-900">No items currently in this category</h4>
+                        <p class="text-xs text-gray-500 mt-1">Check back soon or ask our nursery team about custom orders.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-3xl overflow-hidden border border-gray-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1';
+                
+                let actionBtnHtml = '';
+                if (item.action === 'potting') {
+                    actionBtnHtml = `
+                        <button class="card-action-btn w-full bg-forest-700 hover:bg-forest-800 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5" data-action="potting" data-name="${item.name}" data-price="${item.price}">
+                            <span>🏺 Pair at Potting Bar</span>
+                            <span>&rarr;</span>
+                        </button>
+                    `;
+                } else if (item.action === 'weplant') {
+                    actionBtnHtml = `
+                        <button class="card-action-btn w-full bg-forest-800 hover:bg-forest-900 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5" data-action="weplant" data-name="${item.name}">
+                            <span>🌱 Installation &amp; Delivery</span>
+                            <span>&rarr;</span>
+                        </button>
+                    `;
+                } else {
+                    actionBtnHtml = `
+                        <button class="card-action-btn w-full bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5" data-action="pickup" data-name="${item.name}">
+                            <span>Reserve for Express Pickup</span>
+                            <span>&rarr;</span>
+                        </button>
+                    `;
+                }
+
+                card.innerHTML = `
+                    <div>
+                        <!-- Image Container with Badges -->
+                        <div class="relative h-56 sm:h-64 overflow-hidden bg-sand-200">
+                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3.5 left-3.5 flex flex-col gap-1.5 items-start">
+                                <span class="text-[11px] font-bold px-3 py-1 rounded-full shadow-sm border ${item.badgeColor || 'bg-amber-100 text-amber-900 border-amber-300'} backdrop-blur-md">
+                                    ${item.badge}
+                                </span>
+                            </div>
+
+                            <!-- Floating Price Tag -->
+                            <div class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur-md text-forest-900 font-serif font-bold text-sm px-3.5 py-1 rounded-xl shadow-md border border-gray-100">
+                                ${item.price}
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <div class="text-[11px] font-semibold text-terracotta-600 uppercase tracking-wider mb-1">${item.botanical}</div>
+                            <h3 class="font-serif text-xl font-bold text-forest-900 leading-snug mb-2 group-hover:text-forest-700 transition-colors">
+                                ${item.name}
+                            </h3>
+                            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                                ${item.desc}
+                            </p>
+
+                            <!-- Care Specs Micro-Tag -->
+                            <div class="bg-sand-50 p-2.5 rounded-xl border border-gray-100 flex items-center gap-2 text-[11px] text-forest-800">
+                                <span class="text-sm">🌿</span>
+                                <span class="font-medium truncate">${item.care}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="p-6 pt-0">
+                        ${actionBtnHtml}
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+
+            // Bind Action Buttons on newly rendered cards
+            grid.querySelectorAll('.card-action-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const action = btn.getAttribute('data-action');
+                    const name = btn.getAttribute('data-name');
+                    if (action === 'potting') {
+                        document.querySelector('#potting-bar').scrollIntoView({ behavior: 'smooth' });
+                        showToast(`Selected "${name}" for Potting Bar!`);
+                    } else if (action === 'weplant') {
+                        openConsultModal('we-plant', `Inquiring about specimen installation for: ${name}`);
+                    } else {
+                        openConsultModal('potting', `Express Pickup Reservation: ${name}`);
+                    }
+                });
+            });
+        }
+
+        // Seasonal Filter Tabs
+        document.querySelectorAll('.seasonal-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.seasonal-filter-btn').forEach(b => {
+                    b.classList.remove('active', 'border-forest-700', 'bg-forest-700', 'text-white');
+                    b.classList.add('border-gray-200', 'bg-white', 'text-gray-700');
+                });
+                btn.classList.add('active', 'border-forest-700', 'bg-forest-700', 'text-white');
+                btn.classList.remove('border-gray-200', 'bg-white', 'text-gray-700');
+                currentSeasonalFilter = btn.getAttribute('data-filter');
+                renderSeasonalGrid();
+            });
+        });
+
+        // -------------------------------------------------------------
+        // STAFF QUICK SEASONAL PLANT UPDATER MODAL LOGIC
+        // -------------------------------------------------------------
+        const seasonalManagerModal = document.getElementById('seasonalManagerModal');
+        const openSeasonalManagerBtn = document.getElementById('openSeasonalManagerBtn');
+        const closeSeasonalModalBtn = document.getElementById('closeSeasonalModalBtn');
+        const closeManagerAndSaveBtn = document.getElementById('closeManagerAndSaveBtn');
+        const seasonPresetSelect = document.getElementById('seasonPresetSelect');
+        const applyPresetBtn = document.getElementById('applyPresetBtn');
+        const seasonalItemsList = document.getElementById('seasonalItemsList');
+        const cardEditFormContainer = document.getElementById('cardEditFormContainer');
+        const addNewCardBtn = document.getElementById('addNewCardBtn');
+        const cancelEditBtn = document.getElementById('cancelEditBtn');
+        const saveCardBtn = document.getElementById('saveCardBtn');
+        const resetDefaultsBtn = document.getElementById('resetDefaultsBtn');
+        const copyCodeBtn = document.getElementById('copyCodeBtn');
+
+        function openSeasonalManager() {
+            renderModalItemList();
+            cardEditFormContainer.classList.add('hidden');
+            seasonalManagerModal.classList.remove('hidden');
+        }
+
+        function closeSeasonalManager() {
+            seasonalManagerModal.classList.add('hidden');
+            renderSeasonalGrid();
+        }
+
+        if (openSeasonalManagerBtn) openSeasonalManagerBtn.addEventListener('click', openSeasonalManager);
+        if (closeSeasonalModalBtn) closeSeasonalModalBtn.addEventListener('click', closeSeasonalManager);
+        if (closeManagerAndSaveBtn) closeManagerAndSaveBtn.addEventListener('click', closeSeasonalManager);
+
+        seasonalManagerModal.addEventListener('click', (e) => {
+            if (e.target === seasonalManagerModal) closeSeasonalManager();
+        });
+
+        function renderModalItemList() {
+            document.getElementById('modalActiveCount').textContent = activeSeasonalItems.length;
+            seasonalItemsList.innerHTML = '';
+
+            activeSeasonalItems.forEach((item, index) => {
+                const row = document.createElement('div');
+                row.className = 'p-3 bg-white rounded-xl border border-gray-200 flex items-center justify-between gap-4 hover:border-forest-300 transition-colors';
+                row.innerHTML = `
+                    <div class="flex items-center gap-3 min-w-0">
+                        <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-lg object-cover bg-sand-200 shrink-0">
+                        <div class="min-w-0">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-xs text-forest-900 truncate">${item.name}</span>
+                                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.badgeColor || 'bg-amber-100 text-amber-800'} shrink-0">${item.badge}</span>
+                            </div>
+                            <div class="text-[11px] text-gray-500 truncate">${item.botanical} • <strong class="text-forest-800">${item.price}</strong></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button class="edit-item-btn text-xs font-bold text-forest-700 hover:text-forest-900 px-2.5 py-1 rounded bg-sand-100 hover:bg-sand-200 transition-colors" data-index="${index}">
+                            Edit
+                        </button>
+                        <button class="delete-item-btn text-xs font-bold text-red-600 hover:text-red-800 px-2.5 py-1 rounded hover:bg-red-50 transition-colors" data-index="${index}">
+                            &times;
+                        </button>
+                    </div>
+                `;
+                seasonalItemsList.appendChild(row);
+            });
+
+            // Bind Edit & Delete buttons
+            seasonalItemsList.querySelectorAll('.edit-item-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = parseInt(btn.getAttribute('data-index'));
+                    startEditingCard(idx);
+                });
+            });
+
+            seasonalItemsList.querySelectorAll('.delete-item-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = parseInt(btn.getAttribute('data-index'));
+                    if (confirm(`Remove "${activeSeasonalItems[idx].name}" from seasonal showcase?`)) {
+                        activeSeasonalItems.splice(idx, 1);
+                        saveActiveItems();
+                        renderModalItemList();
+                        renderSeasonalGrid();
+                    }
+                });
+            });
+        }
+
+        function startEditingCard(index) {
+            editingCardIndex = index;
+            cardEditFormContainer.classList.remove('hidden');
+
+            if (index >= 0) {
+                const item = activeSeasonalItems[index];
+                document.getElementById('editFormTitle').textContent = `Edit "${item.name}"`;
+                document.getElementById('editCardName').value = item.name;
+                document.getElementById('editCardBotanical').value = item.botanical;
+                document.getElementById('editCardBadge').value = item.badge;
+                document.getElementById('editCardCategory').value = item.category;
+                document.getElementById('editCardPrice').value = item.price;
+                document.getElementById('editCardCare').value = item.care;
+                document.getElementById('editCardAction').value = item.action || 'pickup';
+                document.getElementById('editCardDesc').value = item.desc;
+                document.getElementById('editCardImage').value = item.image;
+            } else {
+                document.getElementById('editFormTitle').textContent = 'Add New Seasonal Plant / Product';
+                document.getElementById('editCardName').value = '';
+                document.getElementById('editCardBotanical').value = '';
+                document.getElementById('editCardBadge').value = '🍂 In Season Now';
+                document.getElementById('editCardCategory').value = 'fall-color';
+                document.getElementById('editCardPrice').value = '$24.00';
+                document.getElementById('editCardCare').value = 'Part Sun • Keep Moist';
+                document.getElementById('editCardAction').value = 'pickup';
+                document.getElementById('editCardDesc').value = 'Fresh Pacific Northwest arrival acclimatized for Eastside home gardens.';
+                document.getElementById('editCardImage').value = 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg';
+            }
+
+            cardEditFormContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        addNewCardBtn.addEventListener('click', () => startEditingCard(-1));
+        cancelEditBtn.addEventListener('click', () => cardEditFormContainer.classList.add('hidden'));
+
+        saveCardBtn.addEventListener('click', () => {
+            const name = document.getElementById('editCardName').value.trim();
+            if (!name) {
+                alert('Please enter a plant or product name.');
+                return;
+            }
+
+            const badge = document.getElementById('editCardBadge').value;
+            let badgeColor = 'bg-amber-100 text-amber-800 border-amber-300';
+            if (badge.includes('Tropicals')) badgeColor = 'bg-emerald-100 text-emerald-800 border-emerald-300';
+            else if (badge.includes('Color') || badge.includes('Peak')) badgeColor = 'bg-red-100 text-red-800 border-red-300';
+            else if (badge.includes('Import') || badge.includes('Unpacked')) badgeColor = 'bg-blue-100 text-blue-800 border-blue-300';
+            else if (badge.includes('Spring') || badge.includes('Bloom')) badgeColor = 'bg-pink-100 text-pink-800 border-pink-300';
+            else if (badge.includes('Holiday')) badgeColor = 'bg-emerald-100 text-emerald-900 border-emerald-400';
+
+            const cardData = {
+                id: 'custom-' + Date.now(),
+                name: name,
+                botanical: document.getElementById('editCardBotanical').value.trim() || 'Bellevue Nursery Curated',
+                badge: badge,
+                badgeColor: badgeColor,
+                category: document.getElementById('editCardCategory').value,
+                price: document.getElementById('editCardPrice').value.trim() || '$0.00',
+                care: document.getElementById('editCardCare').value.trim() || 'Inquire with Nursery Horticulturist',
+                desc: document.getElementById('editCardDesc').value.trim() || 'Available now at our 842 104th Ave SE nursery greenhouse.',
+                image: document.getElementById('editCardImage').value.trim() || 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg',
+                action: document.getElementById('editCardAction').value
+            };
+
+            if (editingCardIndex >= 0) {
+                activeSeasonalItems[editingCardIndex] = cardData;
+            } else {
+                activeSeasonalItems.unshift(cardData);
+            }
+
+            saveActiveItems();
+            cardEditFormContainer.classList.add('hidden');
+            renderModalItemList();
+            renderSeasonalGrid();
+            showToast(`Saved "${cardData.name}" to seasonal showcase!`);
+        });
+
+        // Apply 1-Click Preset
+        applyPresetBtn.addEventListener('click', () => {
+            const presetKey = seasonPresetSelect.value;
+            if (SEASONAL_PRESETS[presetKey]) {
+                activeSeasonalItems = [...SEASONAL_PRESETS[presetKey]];
+                saveActiveItems();
+                renderModalItemList();
+                renderSeasonalGrid();
+                
+                const labels = {
+                    fall: 'Late Fall & Pre-Winter',
+                    holiday: 'Holiday Wreaths & Evergreens',
+                    spring: 'Early Spring Awakening',
+                    summer: 'Summer Color & Baskets'
+                };
+                document.getElementById('activeSeasonLabel').textContent = labels[presetKey] || 'Custom Rotation';
+                showToast(`Applied ${labels[presetKey]} preset!`);
+            }
+        });
+
+        // Reset Defaults
+        resetDefaultsBtn.addEventListener('click', () => {
+            if (confirm('Reset seasonal showcase back to original late fall defaults?')) {
+                activeSeasonalItems = [...SEASONAL_PRESETS.fall];
+                saveActiveItems();
+                renderModalItemList();
+                renderSeasonalGrid();
+                document.getElementById('activeSeasonLabel').textContent = 'Late Fall & Pre-Winter';
+                showToast('Reset to default late fall catalog.');
+            }
+        });
+
+        // Copy Code for Ken
+        copyCodeBtn.addEventListener('click', () => {
+            const jsonStr = JSON.stringify(activeSeasonalItems, null, 4);
+            navigator.clipboard.writeText(jsonStr).then(() => {
+                showToast('Copied JSON data to clipboard! Ready to paste for Ken.');
+            }).catch(() => {
+                prompt('Copy this updated JSON array for Ken:', jsonStr);
+            });
+        });
+
+        function saveActiveItems() {
+            try {
+                localStorage.setItem('bn_seasonal_items', JSON.stringify(activeSeasonalItems));
+            } catch (e) {
+                console.warn('Could not save to localStorage', e);
+            }
+        }
+
+        // Initial Grid Render on Page Load
+        renderSeasonalGrid();
+
     </script>
 </body>
 </html>
