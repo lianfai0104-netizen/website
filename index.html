@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bellevue Nursery (Est. 1956) & We Plant It For You. The Eastside's premier independent garden center, houseplant boutique, pottery destination, and professional landscape installation division in Bellevue, WA.">
-    <title>Bellevue Nursery | Garden Center, Houseplants, Pottery &amp; We Plant It For You</title>
+    <title>Bellevue Nursery | Garden Center, Houseplants, Pottery & We Plant It For You</title>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,26 +14,59 @@
             theme: {
                 extend: {
                     colors: {
-                        forest: { 50: '#f2f7f4', 100: '#e1ede5', 200: '#c5dccc', 600: '#2d5a3f', 700: '#234732', 800: '#1b3727', 900: '#142a1e' },
-                        terracotta: { 100: '#faece8', 500: '#c86d51', 600: '#b45b40', 700: '#944731' },
-                        sand: { 50: '#fbfaf8', 100: '#f5f2ec', 200: '#ece6db', 800: '#5c5446' }
+                        forest: {
+                            50: '#f2f7f4',
+                            100: '#e1ede5',
+                            200: '#c5dccc',
+                            600: '#2d5a3f',
+                            700: '#234732',
+                            800: '#1b3727',
+                            900: '#142a1e',
+                        },
+                        terracotta: {
+                            100: '#faece8',
+                            500: '#c86d51',
+                            600: '#b45b40',
+                            700: '#944731',
+                        },
+                        sand: {
+                            50: '#fbfaf8',
+                            100: '#f5f2ec',
+                            200: '#ece6db',
+                            800: '#5c5446',
+                        }
                     },
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], serif: ['"Playfair Display"', 'serif'] }
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
                 }
             }
         }
     </script>
     <style>
-        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        .hero-pattern {
-            background: linear-gradient(115deg, rgba(16, 36, 25, 0.96) 0%, rgba(20, 42, 30, 0.88) 55%, rgba(20, 42, 30, 0.72) 100%),
-                        url('https://bellevuenursery.com/wp-content/uploads/2022/11/rsw_1440h_1440-1.webp') center/cover no-repeat;
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
-        .tab-btn.active, .seasonal-filter-btn.active, .pot-btn.active, .plant-btn.active {
-            background-color: #234732 !important; color: #ffffff !important; border-color: #234732 !important;
+        .hero-pattern {
+            background: linear-gradient(135deg, rgba(20, 42, 30, 0.94) 0%, rgba(35, 71, 50, 0.90) 100%),
+                        radial-gradient(circle at 80% 20%, rgba(200, 109, 81, 0.25) 0%, transparent 50%);
+        }
+        .tab-btn.active, .pill-btn.active, .filter-btn.active {
+            background-color: #234732;
+            color: #ffffff;
+            border-color: #234732;
         }
         input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: #234732; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #234732;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.25);
         }
     </style>
 </head>
@@ -60,16 +93,17 @@
     <header class="sticky top-0 z-40 glass-nav border-b border-gray-200/80 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+                <!-- Brand / Logo -->
                 <a href="#top" id="brandLogo" class="flex items-center gap-3">
                     <img src="https://bellevuenursery.com/wp-content/uploads/2022/09/Bellevue-Text-Logo.jpg" alt="Bellevue Nursery" class="h-10 sm:h-12 w-auto object-contain rounded">
                     <div class="flex flex-col">
                         <span class="text-xl font-serif font-bold tracking-tight text-forest-900">BELLEVUE NURSERY</span>
-                        <span class="text-[11px] font-semibold uppercase tracking-widest text-terracotta-600">
-                            Garden Center, Houseplants &amp; "We Plant It For You" Division
-                        </span>
-                    </div>
+                    <span class="text-[11px] font-semibold uppercase tracking-widest text-terracotta-600">
+                        Garden Center, Houseplants &amp; "We Plant It For You" Division
+                    </span>
                 </a>
 
+                <!-- Desktop Navigation Links -->
                 <nav class="hidden xl:flex items-center gap-6 text-sm font-medium text-gray-700">
                     <a href="#seasonal" class="hover:text-forest-700 transition-colors font-semibold text-terracotta-600 flex items-center gap-1"><span>🍂 Seasonal Arrivals</span></a>
                     <a href="#nursery" class="hover:text-forest-700 transition-colors">Nursery &amp; Plants</a>
@@ -77,7 +111,7 @@
                     <a href="#supplies" class="hover:text-forest-700 transition-colors">Organic Soils</a>
                     <a href="#we-plant" class="hover:text-forest-700 transition-colors font-bold text-forest-800">We Plant It For You</a>
                     <a href="#estimator" class="hover:text-forest-700 transition-colors flex items-center gap-1">
-                        <span>Project Planning</span>
+                        <span>2026 Estimator</span>
                         <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-1.5 py-0.5 rounded">Live</span>
                     </a>
                     <a href="#potting-bar" class="hover:text-forest-700 transition-colors">Potting Bar</a>
@@ -86,6 +120,7 @@
                     <a href="#contact" class="hover:text-forest-700 transition-colors">Hours &amp; Location</a>
                 </nav>
 
+                <!-- Actions -->
                 <div class="hidden sm:flex items-center gap-4">
                     <div class="text-right">
                         <div class="text-[11px] text-gray-500 font-medium uppercase tracking-wider">Direct Store Desk</div>
@@ -96,19 +131,23 @@
                     </button>
                 </div>
 
+                <!-- Mobile Menu Button -->
                 <button id="mobileMenuBtn" aria-label="Toggle Menu" class="xl:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
             </div>
         </div>
 
+        <!-- Mobile Dropdown -->
         <div id="mobileMenu" class="hidden xl:hidden border-b border-gray-200 bg-white px-4 pt-3 pb-6 space-y-3 max-h-[85vh] overflow-y-auto">
             <a href="#seasonal" class="mobile-nav-link block py-2 text-base font-bold text-terracotta-600">🍂 Seasonal Plants &amp; New Arrivals</a>
             <a href="#nursery" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">Nursery &amp; Houseplants</a>
             <a href="#pottery" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">Glazed Pottery &amp; Planters</a>
             <a href="#supplies" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">Organic Soils &amp; Tool Shed</a>
             <a href="#we-plant" class="mobile-nav-link block py-2 text-base font-bold text-forest-800">We Plant It For You (Landscaping &amp; Trees)</a>
-            <a href="#estimator" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">2026 Landscape Scope &amp; Feasibility Guide</a>
+            <a href="#estimator" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">2026 Project Cost Estimator</a>
             <a href="#potting-bar" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">The Potting Bar &amp; Planter Builder</a>
             <a href="#holiday" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">Holiday Porch Pots &amp; Fir Trees</a>
             <a href="#commercial" class="mobile-nav-link block py-2 text-base font-medium text-gray-700 hover:text-forest-700">Corporate Office Plantscaping</a>
@@ -122,108 +161,100 @@
         </div>
     </header>
 
-    <!-- Master Hero Section with Authentic Greenhouse Photo Background -->
+    <!-- Master Hero Section -->
     <section class="relative hero-pattern text-white py-20 lg:py-28 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-t from-forest-900 via-transparent to-transparent opacity-80 pointer-events-none"></div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
+                <!-- Left Hero Copy -->
                 <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-green-200 shadow-sm">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                        <span>70 Years Growing With Bellevue, Medina &amp; The Greater Eastside</span>
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-full text-xs font-semibold text-green-200">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        70 Years Growing With Bellevue, Medina &amp; The Greater Eastside
                     </div>
 
-                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.12] tracking-tight">
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                         Bellevue's Heritage Garden Sanctuary &amp; Master Landscape Authority.
                     </h1>
 
-                    <p class="text-base sm:text-lg text-emerald-100/90 leading-relaxed max-w-2xl font-normal">
-                        A multi-generational haven for urban gardeners, rare houseplant collectors, and Eastside estate landscapes. Explore our sunlit glasshouse of acclimatized tropicals and imported frost-proof ceramics—or partner with our specialized <strong class="text-white font-semibold">We Plant It For You</strong> arborist and landscape installation division.
+                    <p class="text-lg text-emerald-100/90 leading-relaxed max-w-2xl">
+                        Explore our lush greenhouse of acclimatized tropicals, imported frost-proof ceramics, and specimen nursery stock—or partner with our specialized <strong>We Plant It For You</strong> arborist and landscape installation crews.
                     </p>
 
-                    <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-2 max-w-xl">
-                        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center transform hover:-translate-y-0.5 transition-transform">
-                            <div class="text-xl sm:text-2xl font-bold text-white font-serif">Est. 1956</div>
-                            <div class="text-[11px] text-emerald-200/90 font-medium mt-0.5">Independent Nursery</div>
+                    <!-- Trust Chips -->
+                    <div class="grid grid-cols-3 gap-4 pt-2 max-w-lg">
+                        <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                            <div class="text-xl font-bold text-white">Est. 1956</div>
+                            <div class="text-[11px] text-emerald-200">Independent Nursery</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center transform hover:-translate-y-0.5 transition-transform">
-                            <div class="text-xl sm:text-2xl font-bold text-white font-serif">ISA Certified</div>
-                            <div class="text-[11px] text-emerald-200/90 font-medium mt-0.5">Arborists on Staff</div>
+                        <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                            <div class="text-xl font-bold text-white">ISA Certified</div>
+                            <div class="text-[11px] text-emerald-200">Arborists on Staff</div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 text-center transform hover:-translate-y-0.5 transition-transform">
-                            <div class="text-xl sm:text-2xl font-bold text-white font-serif">1-Year</div>
-                            <div class="text-[11px] text-emerald-200/90 font-medium mt-0.5">Plant Health Warranty</div>
+                        <div class="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                            <div class="text-xl font-bold text-white">1-Year</div>
+                            <div class="text-[11px] text-emerald-200">Plant Health Warranty</div>
                         </div>
                     </div>
 
+                    <!-- Hero CTAs -->
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <a href="#nursery" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2 text-sm">
+                        <a href="#nursery" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
                             <span>Explore Nursery Departments</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </a>
-                        <button id="heroConsultBtn" class="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl backdrop-blur-md transition-all text-center flex items-center justify-center gap-2 text-sm transform hover:-translate-y-0.5">
-                            <span>Book Landscape Feasibility Walk</span>
+                        <a href="#estimator" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl backdrop-blur-md transition-all text-center flex items-center justify-center gap-2">
+                            <span>2026 Project Estimator</span>
                             <span>&rarr;</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
+                <!-- Right Store & Field Snapshot Card -->
                 <div class="lg:col-span-5">
-                    <div class="bg-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden border border-white/40">
-                        <div class="relative h-44 overflow-hidden bg-forest-900">
-                            <img src="https://bellevuenursery.com/wp-content/uploads/2022/10/Peppers-Millet.jpg" alt="Bellevue Nursery Yard" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-forest-900/90 via-forest-900/40 to-transparent"></div>
-                            
-                            <div class="absolute top-3 left-3 right-3 flex justify-between items-center">
-                                <span class="bg-forest-900/80 backdrop-blur-md text-emerald-200 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-forest-700">
-                                    842 104th Ave SE
-                                </span>
-                                <span class="bg-emerald-500 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow flex items-center gap-1">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-                                    Open Today 9–6
-                                </span>
+                    <div class="bg-white text-gray-900 rounded-2xl shadow-2xl p-6 sm:p-8 border border-white/30">
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-4 mb-5">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-terracotta-600">Nursery Store &amp; Field Ops</span>
+                                <h3 class="font-serif text-xl font-bold text-forest-900">Bellevue Nursery HQ</h3>
                             </div>
-
-                            <div class="absolute bottom-3 left-4 right-4">
-                                <div class="text-[11px] font-bold uppercase tracking-widest text-amber-300">Bellevue Botanical Destination</div>
-                                <h3 class="font-serif text-lg font-bold text-white">Nursery Store &amp; We Plant It For You HQ</h3>
-                            </div>
+                            <span class="bg-green-100 text-forest-700 text-xs font-bold px-2.5 py-1 rounded-full">Open Today</span>
                         </div>
 
-                        <div class="p-6 space-y-3.5 text-xs sm:text-sm">
-                            <div class="flex justify-between items-center py-1 border-b border-gray-100">
-                                <span class="text-gray-600 font-medium">Retail Store &amp; Greenhouse</span>
-                                <span class="font-bold text-forest-900 text-right">842 104th Ave SE, Bellevue</span>
+                        <div class="space-y-3.5 text-sm">
+                            <div class="flex justify-between items-center py-1.5 border-b border-gray-50">
+                                <span class="text-gray-600 font-medium">Retail Store Address</span>
+                                <span class="font-bold text-forest-900">842 104th Ave SE</span>
                             </div>
-                            <div class="flex justify-between items-center py-1 border-b border-gray-100">
-                                <span class="text-gray-600 font-medium">Direct Store Desk</span>
-                                <a href="tel:4254545531" class="font-bold text-forest-800 hover:text-terracotta-600 transition-colors">(425) 454-5531</a>
+                            <div class="flex justify-between items-center py-1.5 border-b border-gray-50">
+                                <span class="text-gray-600 font-medium">Store Telephone</span>
+                                <a href="tel:4254545531" class="font-bold text-forest-800 hover:underline">(425) 454-5531</a>
                             </div>
-                            <div class="flex justify-between items-center py-1 border-b border-gray-100">
-                                <span class="text-gray-600 font-medium">Installation Operations</span>
-                                <a href="tel:4254544417" class="font-bold text-forest-800 hover:text-terracotta-600 transition-colors">(425) 454-4417</a>
+                            <div class="flex justify-between items-center py-1.5 border-b border-gray-50">
+                                <span class="text-gray-600 font-medium">We Plant It For You Operations</span>
+                                <a href="tel:4254544417" class="font-bold text-forest-800 hover:underline">(425) 454-4417</a>
                             </div>
-                            <div class="flex justify-between items-center py-1 border-b border-gray-100">
+                            <div class="flex justify-between items-center py-1.5 border-b border-gray-50">
                                 <span class="text-gray-600 font-medium">Store Operating Hours</span>
                                 <span class="font-bold text-forest-900">Mon–Sat 9–6 • Sun 10–5</span>
                             </div>
-                            <div class="flex justify-between items-center py-1">
-                                <span class="text-gray-600 font-medium">City Permitting &amp; Lic.</span>
-                                <span class="font-mono text-xs font-bold text-gray-700">WA #BELLEVN842 • BCC 20.20</span>
+                            <div class="flex justify-between items-center py-1.5">
+                                <span class="text-gray-600 font-medium">Contractor License</span>
+                                <span class="font-mono text-xs font-bold text-gray-700">#BELLEVN842</span>
                             </div>
                         </div>
 
-                        <div class="px-6 py-4 bg-sand-100 border-t border-gray-200 flex items-center justify-between">
-                            <div>
-                                <div class="text-[11px] text-gray-500 font-medium">Planning exterior work?</div>
-                                <div class="text-xs font-bold text-forest-900">Arborist Feasibility Walk</div>
+                        <div class="mt-6 pt-5 border-t border-gray-100 bg-sand-50 -mx-6 -mb-6 sm:-mx-8 sm:-mb-8 p-6 rounded-b-2xl">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="text-xs text-gray-500 font-medium">Planning an exterior project?</div>
+                                    <div class="text-sm font-bold text-forest-900">Calculate 2026 Eastside rates</div>
+                                </div>
+                                <a href="#estimator" class="text-xs font-bold text-terracotta-600 hover:text-terracotta-700 flex items-center gap-1">
+                                    <span>Instant Calculator</span>
+                                    <span>&rarr;</span>
+                                </a>
                             </div>
-                            <a href="#estimator" class="text-xs font-bold text-terracotta-600 hover:text-terracotta-700 flex items-center gap-1">
-                                <span>Scope Guide</span>
-                                <span>&rarr;</span>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -232,9 +263,12 @@
         </div>
     </section>
 
+    
     <!-- SECTION 0B: MODULAR SEASONAL PLANTS & FRESH ARRIVALS SHOWCASE -->
     <section id="seasonal" class="py-20 bg-sand-100/90 border-b border-gray-200 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header & Staff Admin Bar -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div>
                     <div class="inline-flex items-center gap-2 bg-terracotta-100 text-terracotta-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
@@ -248,22 +282,213 @@
                     </p>
                 </div>
 
-                <div class="flex items-center gap-3">
+                <!-- Easy Staff Quick-Update Trigger -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                     <span class="text-xs text-gray-500 font-medium">Rotation: <strong id="activeSeasonLabel" class="text-forest-800">Late Fall &amp; Pre-Winter</strong></span>
+                    <button id="openSeasonalManagerBtn" class="inline-flex items-center gap-2 bg-white hover:bg-forest-50 text-forest-800 text-xs font-bold px-3.5 py-2 rounded-xl border border-forest-300 shadow-sm hover:shadow transition-all group">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 group-hover:scale-125 transition-transform"></span>
+                        <span>⚙️ Staff: Quick Seasonal Plant Updater</span>
+                    </button>
                 </div>
             </div>
 
+            <!-- Category Filter Pills -->
             <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-10 border-b border-gray-200/80 pb-4">
-                <button class="seasonal-filter-btn active px-4 py-2 rounded-xl text-xs font-bold border border-forest-700 bg-forest-700 text-white transition-all" data-filter="all">All Featured Arrivals (<span id="count-all">6</span>)</button>
-                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="fall-color">🍂 Fall Color &amp; Bulbs</button>
-                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="tropicals">🌿 Indoor Tropicals</button>
-                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="trees">🍁 Specimen Trees &amp; Shrubs</button>
-                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="pottery">🏺 Glazed Pottery Drops</button>
+                <button class="seasonal-filter-btn active px-4 py-2 rounded-xl text-xs font-bold border border-forest-700 bg-forest-700 text-white transition-all" data-filter="all">
+                    All Featured Arrivals (<span id="count-all">6</span>)
+                </button>
+                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="fall-color">
+                    🍂 Fall Color &amp; Bulbs
+                </button>
+                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="tropicals">
+                    🌿 Indoor Tropicals
+                </button>
+                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="trees">
+                    🍁 Specimen Trees &amp; Shrubs
+                </button>
+                <button class="seasonal-filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 transition-all" data-filter="pottery">
+                    🏺 Glazed Pottery Drops
+                </button>
             </div>
 
-            <div id="seasonalCardGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <!-- Dynamic Seasonal Card Grid -->
+            <div id="seasonalCardGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards will be populated by JavaScript for instant updates -->
+            </div>
+
+            <!-- Bottom Customer Assistance Callout -->
+            <div class="mt-14 p-6 sm:p-8 bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-forest-100 text-forest-800 flex items-center justify-center text-2xl shrink-0">
+                        🌱
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg font-bold text-forest-900">Looking for a specific PNW plant or rare cultivar?</h4>
+                        <p class="text-xs text-gray-600 mt-0.5">Our greenhouse buyer Jess Hui and nursery specialists receive fresh grower shipments every Tuesday &amp; Thursday.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 shrink-0">
+                    <a href="tel:4254545531" class="text-xs font-bold bg-forest-700 hover:bg-forest-800 text-white px-5 py-2.5 rounded-xl transition-colors">
+                        Call Store Desk: (425) 454-5531
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
+
+    <!-- MODAL: STAFF QUICK SEASONAL PLANT UPDATER -->
+    <div id="seasonalManagerModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl border border-gray-200 max-h-[92vh] flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center border-b border-gray-100 pb-4 mb-4 shrink-0">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-terracotta-600">Bellevue Nursery Admin Tool</span>
+                    <h3 class="font-serif text-2xl font-bold text-forest-900">Quick Seasonal Plant &amp; Block Updater</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">Easily update seasonal arrivals, rotate quarterly collections, or switch inventory presets without coding.</p>
+                </div>
+                <button id="closeSeasonalModalBtn" class="text-gray-400 hover:text-gray-600 p-2 text-2xl leading-none">&times;</button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div class="overflow-y-auto space-y-6 pr-1 flex-1">
+                
+                <!-- Preset Quick Switcher -->
+                <div class="p-4 bg-sand-100 rounded-2xl border border-gray-200">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-forest-800">1-Click Seasonal Rotation Presets</span>
+                            <div class="text-xs text-gray-600">Switch the entire seasonal showcase to a curated seasonal theme in one click:</div>
+                        </div>
+                        <div class="flex items-center gap-2 w-full sm:w-auto">
+                            <select id="seasonPresetSelect" class="bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs font-semibold text-gray-800 focus:ring-2 focus:ring-forest-600">
+                                <option value="fall" selected>🍂 Autumn Color &amp; Bulbs (Current)</option>
+                                <option value="holiday">🎄 Holiday Greens &amp; Fir Trees (Nov–Dec)</option>
+                                <option value="spring">🌸 Spring Awakening &amp; Bulbs (Jan–April)</option>
+                                <option value="summer">☀️ Summer Blooms &amp; Patio (May–Aug)</option>
+                            </select>
+                            <button id="applyPresetBtn" class="bg-forest-700 hover:bg-forest-800 text-white font-bold text-xs px-4 py-2 rounded-xl transition-colors shrink-0">
+                                Apply Preset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card List / Editor Table -->
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-forest-900">Active Showcase Blocks (<span id="modalActiveCount">6</span> Items)</span>
+                        <button id="addNewCardBtn" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs px-3.5 py-1.5 rounded-lg transition-colors flex items-center gap-1">
+                            <span>+ Add Seasonal Item</span>
+                        </button>
+                    </div>
+
+                    <div id="seasonalItemsList" class="space-y-3">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Edit / Add Single Card Form (Hidden by default until edit or add clicked) -->
+                <div id="cardEditFormContainer" class="hidden p-5 bg-sand-50 rounded-2xl border border-forest-200 space-y-4">
+                    <div class="flex justify-between items-center border-b border-gray-200 pb-2">
+                        <h4 id="editFormTitle" class="font-serif font-bold text-forest-900 text-base">Edit Seasonal Block</h4>
+                        <button id="cancelEditBtn" class="text-xs font-semibold text-gray-500 hover:text-gray-700">Cancel</button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Common Plant / Product Name *</label>
+                            <input type="text" id="editCardName" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="e.g. Bloodgood Japanese Maple">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Botanical Subheading / Variety</label>
+                            <input type="text" id="editCardBotanical" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="e.g. Acer palmatum 'Bloodgood'">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Badge / Seasonal Tag</label>
+                            <select id="editCardBadge" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold">
+                                <option value="🍂 In Season Now">🍂 In Season Now</option>
+                                <option value="🌿 Cascade Tropicals Drop">🌿 Cascade Tropicals Drop</option>
+                                <option value="🌸 Spring Arrival">🌸 Spring Arrival</option>
+                                <option value="❄️ Cold Hardy">❄️ Cold Hardy</option>
+                                <option value="🏺 Handcrafted Import">🏺 Handcrafted Import</option>
+                                <option value="⭐ Staff Favorite">⭐ Staff Favorite</option>
+                                <option value="🎄 Holiday Special">🎄 Holiday Special</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Category Filter</label>
+                            <select id="editCardCategory" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold">
+                                <option value="fall-color">🍂 Fall Color &amp; Bulbs</option>
+                                <option value="tropicals">🌿 Indoor Tropicals</option>
+                                <option value="trees">🍁 Specimen Trees &amp; Shrubs</option>
+                                <option value="pottery">🏺 Glazed Pottery Drops</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Display Price *</label>
+                            <input type="text" id="editCardPrice" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="e.g. $14.99 / 6-Pack or $285.00">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Sun &amp; Moisture Care Note</label>
+                            <input type="text" id="editCardCare" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="e.g. Full/Part Sun • Keep Moist • Hardy to -10°F">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Action Button Type</label>
+                            <select id="editCardAction" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold">
+                                <option value="pickup">Reserve for Express Pickup</option>
+                                <option value="potting">Pair at Potting Bar</option>
+                                <option value="weplant">Inquire / We Plant It For You</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Short Description / Eastside Garden Tips</label>
+                        <textarea id="editCardDesc" rows="2" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-semibold" placeholder="Why Eastside gardeners love this plant and where to plant it..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Image URL</label>
+                        <input type="text" id="editCardImage" class="w-full bg-white border border-gray-300 rounded-xl p-2.5 text-xs font-mono" placeholder="https://...">
+                    </div>
+
+                    <div class="flex justify-end gap-3 pt-2">
+                        <button type="button" id="saveCardBtn" class="bg-forest-700 hover:bg-forest-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-colors">
+                            Save Item to Showcase
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer Actions -->
+            <div class="pt-4 border-t border-gray-200 mt-4 flex flex-col sm:flex-row justify-between items-center gap-3 shrink-0">
+                <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <span>💡 Changes update live on your screen instantly.</span>
+                </div>
+                <div class="flex items-center gap-3 w-full sm:w-auto">
+                    <button id="resetDefaultsBtn" class="text-xs text-gray-500 hover:text-red-600 font-semibold px-3 py-2">
+                        Reset Defaults
+                    </button>
+                    <button id="copyCodeBtn" class="bg-sand-200 hover:bg-sand-300 text-forest-900 font-bold text-xs px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5">
+                        <span>📋 Copy Code for Ken / GitHub</span>
+                    </button>
+                    <button id="closeManagerAndSaveBtn" class="bg-forest-700 hover:bg-forest-800 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-colors">
+                        Done &amp; View Website
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!-- SECTION 1: COMPLETE RETAIL NURSERY DEPARTMENTS -->
     <section id="nursery" class="py-20 bg-white">
@@ -277,14 +502,22 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dept 1: Indoor Tropicals -->
                 <div class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
                         <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
-                            <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/ezgif.com-gif-maker-7-scaled-square.jpg" alt="Indoor Tropicals" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2 py-0.5 rounded">Cascade Tropicals</span>
-                        </div>
+                        <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/ezgif.com-gif-maker-7-scaled-square.jpg" alt="Acclimatized Tropical Houseplants at Bellevue Nursery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-emerald-200 text-[10px] font-bold px-2 py-0.5 rounded">Cascade Tropicals</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Indoor Plants &amp; Rare Tropicals</h3>
-                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Acclimatized indoor foliage curated by buyer Jess Hui. Monsteras, Fiddle Leaf Figs, Sansevierias, rare Philodendrons, and Hoyas.</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                            Acclimatized indoor foliage curated by buyer Jess Hui. Monsteras, Fiddle Leaf Figs, Sansevierias, rare Philodendrons, Hoyas, Ferns, and Air Plants.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1.5">
+                            <li>• Sourced fresh from Cascade Tropicals</li>
+                            <li>• Pest-inspected and acclimatized for home light</li>
+                            <li>• Pairs with our in-store Potting Bar service</li>
+                        </ul>
                     </div>
                     <div class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between">
                         <span class="text-xs font-semibold text-forest-700">Greenhouse Bench</span>
@@ -292,29 +525,45 @@
                     </div>
                 </div>
 
+                <!-- Dept 2: Specimen Trees & Shrubs -->
                 <div class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
                         <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
-                            <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Rudbeckia-Denver-Daisy-square.jpg" alt="Specimen Trees" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-amber-200 text-[10px] font-bold px-2 py-0.5 rounded">Outdoor Nursery Yard</span>
-                        </div>
+                        <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Rudbeckia-Denver-Daisy-square.jpg" alt="Seasonal Blooming Perennials & Trees at Bellevue Nursery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-amber-200 text-[10px] font-bold px-2 py-0.5 rounded">Outdoor Nursery Yard</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Specimen Trees &amp; PNW Shrubs</h3>
-                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Urban-scale focal points tailored to King County soil: Weeping Japanese Maples, Flowering Cherries, Dwarf Conifers, and Hydrangeas.</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                            Urban-scale trees and landscape focal points tailored to King County soil: Weeping Japanese Maples, Flowering Cherries, Dwarf Conifers, Rhododendrons, and Hydrangeas.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1.5">
+                            <li>• Cold-hardy Pacific Northwest rootstocks</li>
+                            <li>• Fall bulb selection from Netherland Bulb Company</li>
+                            <li>• Full installation available via "We Plant It For You"</li>
+                        </ul>
                     </div>
                     <div class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between">
-                        <span class="text-xs font-semibold text-forest-700">Nursery Yard</span>
+                        <span class="text-xs font-semibold text-forest-700">Outdoor Nursery Yard</span>
                         <a href="#we-plant" class="text-xs font-bold text-terracotta-600 hover:underline">Installation Options &rarr;</a>
                     </div>
                 </div>
 
+                <!-- Dept 3: Glazed Pottery & Containers -->
                 <div id="pottery" class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
                         <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
-                            <img src="https://bellevuenursery.com/wp-content/uploads/2022/11/ezgif.com-gif-maker-8.jpg" alt="Pots and Containers" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-terracotta-200 text-[10px] font-bold px-2 py-0.5 rounded">Frost-Proof High Fire</span>
-                        </div>
+                        <img src="https://bellevuenursery.com/wp-content/uploads/2022/11/ezgif.com-gif-maker-8.jpg" alt="Imported Frost-Proof Glazed Planters at Bellevue Nursery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-terracotta-200 text-[10px] font-bold px-2 py-0.5 rounded">Frost-Resistant High Fire</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Pots &amp; Architectural Containers</h3>
-                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Direct-imported glazed ceramics from Washington Pottery Company and Accent Decor. High-fired to prevent freeze cracking.</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                            Direct-imported and domestic pottery from Washington Pottery Company and Accent Decor. High-fired frost-resistant glazed ceramics, Italian terracotta, and modern urns.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1.5">
+                            <li>• Glazed Cylinders, Bell Planters, Luna Spheres</li>
+                            <li>• High-fired to prevent winter freeze cracking</li>
+                            <li>• Drainage hole drilling available on-site</li>
+                        </ul>
                     </div>
                     <div class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between">
                         <span class="text-xs font-semibold text-forest-700">Pottery Yard</span>
@@ -322,14 +571,22 @@
                     </div>
                 </div>
 
+                <!-- Dept 4: Soils & Amendments -->
                 <div id="supplies" class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
                         <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
-                            <img src="https://bellevuenursery.com/wp-content/uploads/2022/11/ezgif.com-gif-maker-6-1536x1014.jpg" alt="Organic Soils" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-green-200 text-[10px] font-bold px-2 py-0.5 rounded">100% Organic OMRI</span>
-                        </div>
+                        <img src="https://bellevuenursery.com/wp-content/uploads/2022/11/ezgif.com-gif-maker-6-1536x1014.jpg" alt="Organic Gardner & Bloome Soils and Amendments" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-green-200 text-[10px] font-bold px-2 py-0.5 rounded">100% Organic OMRI</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Organic Soils &amp; Amendments</h3>
-                        <p class="text-xs text-gray-600 leading-relaxed mb-4">The gold standard for Pacific Northwest clay soils: Gardner &amp; Bloome organic potting soils and organic composted amendments.</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                            The gold standard for Pacific Northwest clay soils: Gardner &amp; Bloome (GB) organic potting soil, composted chicken manure, bone meal, and natural starter fertilizers.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1.5">
+                            <li>• Manufactured by Kellogg Garden Products</li>
+                            <li>• 100% organic OMRI-listed soil conditioning</li>
+                            <li>• Bulk pallet deliveries available across Eastside</li>
+                        </ul>
                     </div>
                     <div class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between">
                         <span class="text-xs font-semibold text-forest-700">Soil Shed</span>
@@ -337,14 +594,22 @@
                     </div>
                 </div>
 
+                <!-- Dept 5: Garden Supplies & Tool Shed -->
                 <div class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
                         <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
-                            <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Tool-Wall-2022-2-square.jpg" alt="Tool Shed" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-blue-200 text-[10px] font-bold px-2 py-0.5 rounded">The Tool Shed</span>
-                        </div>
+                        <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Tool-Wall-2022-2-square.jpg" alt="Bellevue Nursery Tool Shed and Swiss Felco Tools" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-blue-200 text-[10px] font-bold px-2 py-0.5 rounded">The Tool Shed</span>
+                    </div>
                         <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Garden Supplies &amp; Tool Shed</h3>
-                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Swiss Felco pruners, pollinator-friendly organic pest remedies, professional watering wands, and botanical garden gloves.</p>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                            Pro-grade tools and remedies to keep your garden thriving: Swiss Felco pruners, organic pest/fungal solutions, watering wands, bamboo staking, and botanical gloves.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1.5">
+                            <li>• Felco shears &amp; replacement blades</li>
+                            <li>• Safe, pollinator-friendly organic pest sprays</li>
+                            <li>• Expert care advice from our staff floor horticulturists</li>
+                        </ul>
                     </div>
                     <div class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between">
                         <span class="text-xs font-semibold text-forest-700">Tool Shed</span>
@@ -352,17 +617,25 @@
                     </div>
                 </div>
 
+                <!-- Dept 6: Boutique Gift Shop -->
                 <div class="bg-sand-50 rounded-2xl p-7 border border-gray-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
                         <div class="relative h-48 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-sand-200">
-                            <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/MothersDay-2026-square.jpg" alt="Gift Shop" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-purple-200 text-[10px] font-bold px-2 py-0.5 rounded">Gift Shop &amp; Accents</span>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Home Décor &amp; Botanical Gifts</h3>
-                        <p class="text-xs text-gray-600 leading-relaxed mb-4">Unique botanical accents, tabletop fire features, scented plant candles, botanical stationery, and Bellevue Nursery gift vouchers.</p>
+                        <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/MothersDay-2026-square.jpg" alt="Botanical Gift Shop & Decor at Bellevue Nursery" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute bottom-2.5 left-3 bg-forest-900/80 backdrop-blur-md text-purple-200 text-[10px] font-bold px-2 py-0.5 rounded">Gift Shop &amp; Accents</span>
+                    </div>
+                        <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">Home Décor &amp; Botanical Gift Shop</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                            Unique accents for living and garden spaces: tabletop concrete fire bowls, scented plant candles, botanical cards, accent wind chimes, and seasonal holiday gifts.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1.5">
+                            <li>• Bellevue Nursery Gift Cards (Digital or In-Store)</li>
+                            <li>• Tabletop bioethanol fire features</li>
+                            <li>• Complimentary gift wrapping on container plants</li>
+                        </ul>
                     </div>
                     <div class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between">
-                        <span class="text-xs font-semibold text-forest-700">Main Counter</span>
+                        <span class="text-xs font-semibold text-forest-700">Main Store Counter</span>
                         <a href="tel:4254545531" class="text-xs font-bold text-terracotta-600 hover:underline">Check Gift Stock &rarr;</a>
                     </div>
                 </div>
@@ -377,13 +650,13 @@
                 
                 <div class="lg:col-span-6 space-y-6">
                     <div class="inline-flex items-center gap-2 bg-forest-100 text-forest-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                        White-Glove Landscape &amp; Arborist Division
+                        Professional Installation Division
                     </div>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 leading-tight">
                         We Plant It For You: Landscaping, Tree Care &amp; Patios.
                     </h2>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Don’t risk your investment with unverified labor. Bellevue Nursery's specialized installation division delivers turn-key exterior design, arborist-supervised tree removals, and structural stone terraces.
+                        Don’t risk your investment with back-breaking labor or unverified contractors. Bellevue Nursery's specialized installation division delivers turn-key exterior design, arborist-supervised tree removals, and structural stone terraces.
                     </p>
 
                     <div class="space-y-4 pt-2">
@@ -394,6 +667,7 @@
                                 <p class="text-xs text-gray-500">Every tree and shrub installed by our crew includes soil conditioning, smart irrigation calibration, and a full 1-year replacement warranty.</p>
                             </div>
                         </div>
+
                         <div class="flex items-start gap-3">
                             <span class="text-forest-700 font-bold text-lg">✓</span>
                             <div>
@@ -401,11 +675,12 @@
                                 <p class="text-xs text-gray-500">Complex crane-assisted removals of hazard Douglas firs and big-leaf maples with zero property damage.</p>
                             </div>
                         </div>
+
                         <div class="flex items-start gap-3">
                             <span class="text-forest-700 font-bold text-lg">✓</span>
                             <div>
                                 <h4 class="text-sm font-bold text-forest-900">City of Bellevue BCC 20.20 Permit Exemption Design</h4>
-                                <p class="text-xs text-gray-500">We design compliant on-site replanting credit schedules to eliminate City of Bellevue tree removal fee-in-lieu penalties.</p>
+                                <p class="text-xs text-gray-500">We design compliant on-site replanting credit schedules to eliminate the City's $1,381 per tree fee-in-lieu penalty.</p>
                             </div>
                         </div>
                     </div>
@@ -415,17 +690,20 @@
                             Book On-Site Property Survey
                         </button>
                         <a href="#estimator" class="bg-white border border-gray-300 text-forest-900 font-semibold px-6 py-3 rounded-xl text-xs hover:bg-gray-50 transition-all">
-                            Plan Project Scope &amp; Feasibility &rarr;
+                            Calculate 2026 Project Cost &rarr;
                         </a>
                     </div>
                 </div>
 
+                <!-- 3 Pillars Cards -->
                 <div class="lg:col-span-6 space-y-4">
+
+                    <!-- Real Bellevue Nursery Field Photo & Delivery Van Strip -->
                     <div class="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-sand-200 h-64 mb-6">
-                        <img src="https://bellevuenursery.com/wp-content/uploads/2026/07/qtq80-Aawkw2-1536x1024.jpeg" alt="Bellevue Nursery Installation" class="w-full h-full object-cover">
+                        <img src="https://bellevuenursery.com/wp-content/uploads/2026/07/qtq80-Aawkw2-1536x1024.jpeg" alt="Bellevue Nursery We Plant It For You Garden Installation" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-forest-900/90 via-forest-900/30 to-transparent flex items-end p-5">
                             <div class="flex items-center gap-4">
-                                <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Delivery-Van-1-square.jpg" alt="Delivery Van" class="w-14 h-14 rounded-xl object-cover border-2 border-white shadow">
+                                <img src="https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Delivery-Van-1-square.jpg" alt="Bellevue Nursery Delivery Van" class="w-14 h-14 rounded-xl object-cover border-2 border-white shadow">
                                 <div>
                                     <div class="text-white font-bold text-sm">Eastside Delivery &amp; Turn-Key Planting</div>
                                     <div class="text-emerald-200 text-xs">Direct from our 842 104th Ave SE yard to your garden beds.</div>
@@ -439,9 +717,9 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h4 class="font-serif text-lg font-bold text-forest-900">Arborist Tree Care &amp; Hazard Removal</h4>
-                                <span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full">ISA Certified Arborist</span>
+                                <span class="text-xs font-bold text-forest-800">$900 – $6,000+</span>
                             </div>
-                            <p class="text-xs text-gray-600 mt-1">Crane extraction, fine pruning, crown thinning, and storm clearance across Clyde Hill, Medina &amp; Enatai.</p>
+                            <p class="text-xs text-gray-600 mt-1">Crane extraction, fine pruning, crown thinning, and emergency storm clearance across Clyde Hill &amp; Enatai.</p>
                         </div>
                     </div>
 
@@ -450,9 +728,20 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h4 class="font-serif text-lg font-bold text-forest-900">Luxury Hardscaping, Basalt &amp; Pavers</h4>
-                                <span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full">Engineered Drainage &amp; Stone</span>
+                                <span class="text-xs font-bold text-forest-800">$12,000 – $60,000+</span>
                             </div>
-                            <p class="text-xs text-gray-600 mt-1">Bluestone terraces, hillside engineered retaining walls with French drains, and outdoor living features.</p>
+                            <p class="text-xs text-gray-600 mt-1">Bluestone terraces, hillside engineered retaining walls with French drains, and outdoor kitchen islands.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex items-start gap-4">
+                        <div class="w-12 h-12 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center text-2xl shrink-0">🌿</div>
+                        <div>
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-serif text-lg font-bold text-forest-900">Signature Softscaping &amp; Estate Planting</h4>
+                                <span class="text-xs font-bold text-forest-800">$2,800 – $25,000+</span>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-1">Direct nursery specimen Japanese Maples, rhododendrons, soil grading, and smart drip "Plant Insurance".</p>
                         </div>
                     </div>
                 </div>
@@ -461,90 +750,213 @@
         </div>
     </section>
 
-    <!-- SECTION 3: 2026 ESTIMATOR & FEASIBILITY GUIDE -->
+    <!-- SECTION 3: 2026 ESTIMATOR -->
     <section id="estimator" class="py-20 bg-forest-900 text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-amber-300">Eastside Landscape Advisory</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">2026 Landscape Scope &amp; Feasibility Guide</h2>
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-300">Instant Online Calculator</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">2026 Project Cost Estimator</h2>
                 <p class="text-emerald-100 text-sm mt-3">
-                    Explore Eastside horticultural standards, rootstock sizing, and City of Bellevue BCC 20.20 permit frameworks before our certified arborist visits your estate.
+                    Configure your Eastside project parameters below to compute market-tested price ranges based on King County labor and Bellevue municipal code formulas.
                 </p>
             </div>
 
             <div class="bg-white text-gray-900 rounded-3xl shadow-2xl p-6 sm:p-10 border border-gray-200">
+                <!-- Estimator Category Tabs -->
                 <div class="flex flex-wrap gap-2 sm:gap-4 border-b border-gray-200 pb-4 mb-8">
-                    <button class="tab-btn active px-5 py-2.5 rounded-xl font-bold text-sm border border-gray-200 transition-all" data-category="trees">🌲 Tree Care &amp; Removal</button>
-                    <button class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm border border-gray-200 text-gray-600 hover:bg-gray-50 transition-all" data-category="hardscape">🧱 Luxury Hardscaping</button>
-                    <button class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm border border-gray-200 text-gray-600 hover:bg-gray-50 transition-all" data-category="softscape">🌿 Softscaping &amp; Specimen Plants</button>
+                    <button class="tab-btn active px-5 py-2.5 rounded-xl font-bold text-sm border border-gray-200 transition-all flex items-center gap-2" data-category="trees">
+                        <span>🌲 Tree Care &amp; Removal</span>
+                    </button>
+                    <button class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm border border-gray-200 text-gray-600 hover:bg-gray-50 transition-all flex items-center gap-2" data-category="hardscape">
+                        <span>🧱 Luxury Hardscaping</span>
+                    </button>
+                    <button class="tab-btn px-5 py-2.5 rounded-xl font-bold text-sm border border-gray-200 text-gray-600 hover:bg-gray-50 transition-all flex items-center gap-2" data-category="softscape">
+                        <span>🌿 Softscaping &amp; Specimen Plants</span>
+                    </button>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <!-- Controls Form Column -->
                     <div class="lg:col-span-7 space-y-6">
+
+                        <!-- Tab 1: Tree Care Controls -->
                         <div id="panel-trees" class="estimator-panel space-y-6">
                             <div>
                                 <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Tree Height &amp; Category</label>
                                 <select id="treeSizeSelect" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm font-semibold focus:ring-2 focus:ring-forest-600">
-                                    <option value="600" data-label="Small Tree (< 25 ft) — Birch, Japanese Maple">Small Tree (&lt; 25 ft) — Birch, Japanese Maple (Manual Rigging)</option>
-                                    <option value="1800" selected data-label="Medium Tree (25–50 ft) — Alder, Conifer">Medium Tree (25–50 ft) — Alder, Conifer (Precision Rigging)</option>
-                                    <option value="4500" data-label="Large Specimen (50–80 ft) — Douglas Fir, Cedar">Large Specimen (50–80 ft) — Douglas Fir, Cedar (Crane Assisted)</option>
-                                    <option value="9500" data-label="Landmark Conifer (80+ ft) — Old-Growth Specimen">Landmark Conifer (80+ ft) — Old-Growth Landmark (City Permit Assessment)</option>
+                                    <option value="600" data-label="Small Tree (< 25 ft) — Birch, Japanese Maple">Small Tree (&lt; 25 ft) — Birch, Japanese Maple ($350 – $900)</option>
+                                    <option value="1800" selected data-label="Medium Tree (25–50 ft) — Alder, Conifer">Medium Tree (25–50 ft) — Alder, Conifer ($900 – $3,000)</option>
+                                    <option value="4500" data-label="Large Specimen (50–80 ft) — Douglas Fir, Cedar">Large Specimen (50–80 ft) — Douglas Fir, Cedar ($3,000 – $6,000)</option>
+                                    <option value="9500" data-label="Landmark Conifer (80+ ft) — Old-Growth Specimen">Landmark Conifer (80+ ft) — Old-Growth Specimen ($6,000 – $18,000+)</option>
                                 </select>
                             </div>
+
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs font-bold uppercase tracking-wider text-gray-600">Number of Trees</label>
+                                    <span id="treeCountDisplay" class="text-sm font-bold text-forest-800">1 Tree</span>
+                                </div>
+                                <input type="range" id="treeCountSlider" min="1" max="6" value="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between text-[11px] text-gray-400 mt-1">
+                                    <span>1 Tree</span>
+                                    <span>3 Trees</span>
+                                    <span>6 Trees</span>
+                                </div>
+                            </div>
+
                             <div class="space-y-3 pt-2">
-                                <label class="flex items-start gap-3 p-3 bg-sand-50 rounded-xl border border-gray-200 cursor-pointer">
-                                    <input type="checkbox" id="craneAccessCheck" class="w-4 h-4 mt-0.5 rounded text-forest-700">
-                                    <div><div class="text-sm font-semibold text-gray-900">Crane Access Required</div><div class="text-xs text-gray-500">Specialized crane &amp; tight-access rigging for landlocked parcels</div></div>
+                                <label class="flex items-start gap-3 p-3 bg-sand-50 rounded-xl border border-gray-200 cursor-pointer hover:bg-sand-100 transition-colors">
+                                    <input type="checkbox" id="craneAccessCheck" class="w-4 h-4 mt-0.5 rounded text-forest-700 focus:ring-forest-600">
+                                    <div>
+                                        <div class="text-sm font-semibold text-gray-900">Crane Access Required</div>
+                                        <div class="text-xs text-gray-500">For landlocked backyards &amp; high-density parcels (+ $1,800)</div>
+                                    </div>
                                 </label>
-                                <label class="flex items-start gap-3 p-3 bg-sand-50 rounded-xl border border-gray-200 cursor-pointer">
-                                    <input type="checkbox" id="permitPrepCheck" checked class="w-4 h-4 mt-0.5 rounded text-forest-700">
-                                    <div><div class="text-sm font-semibold text-gray-900">Include Bellevue BCC 20.20 Permit Prep</div><div class="text-xs text-gray-500">Certified arborist report, tree canopy assessment &amp; City filing</div></div>
+
+                                <label class="flex items-start gap-3 p-3 bg-sand-50 rounded-xl border border-gray-200 cursor-pointer hover:bg-sand-100 transition-colors">
+                                    <input type="checkbox" id="permitPrepCheck" checked class="w-4 h-4 mt-0.5 rounded text-forest-700 focus:ring-forest-600">
+                                    <div>
+                                        <div class="text-sm font-semibold text-gray-900">Include Bellevue BCC 20.20 Permit Prep</div>
+                                        <div class="text-xs text-gray-500">Certified arborist report &amp; City submission ($450)</div>
+                                    </div>
                                 </label>
                             </div>
                         </div>
 
+                        <!-- Tab 2: Hardscape Controls -->
                         <div id="panel-hardscape" class="estimator-panel space-y-6 hidden">
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Paving Material</label>
-                                <select id="hardscapeMaterialSelect" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm font-semibold">
-                                    <option value="22" data-label="Architectural Permeable Pavers">Premium Architectural Permeable Pavers</option>
-                                    <option value="32" selected data-label="Natural Bluestone / Cascade Basalt">Natural Bluestone / Cascade Basalt</option>
-                                    <option value="42" data-label="Honed Turkish Travertine">Honed Turkish Travertine</option>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Paving Material Type</label>
+                                <select id="hardscapeMaterialSelect" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm font-semibold focus:ring-2 focus:ring-forest-600">
+                                    <option value="22" data-label="Premium Architectural Pavers ($22/sq ft)">Premium Architectural Pavers ($22/sq ft installed)</option>
+                                    <option value="32" selected data-label="Natural Bluestone / Cascade Basalt ($32/sq ft)">Natural Bluestone / Cascade Basalt ($32/sq ft installed)</option>
+                                    <option value="42" data-label="Honed Turkish Travertine ($42/sq ft)">Honed Turkish Travertine ($42/sq ft installed)</option>
                                 </select>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs font-bold uppercase tracking-wider text-gray-600">Patio / Walkway Area</label>
+                                    <span id="patioAreaDisplay" class="text-sm font-bold text-forest-800">450 sq ft</span>
+                                </div>
+                                <input type="range" id="patioAreaSlider" min="150" max="1800" step="50" value="450" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between text-[11px] text-gray-400 mt-1">
+                                    <span>150 sq ft</span>
+                                    <span>800 sq ft</span>
+                                    <span>1,800 sq ft</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 pt-2">
+                                <label class="flex items-start gap-3 p-3 bg-sand-50 rounded-xl border border-gray-200 cursor-pointer hover:bg-sand-100 transition-colors">
+                                    <input type="checkbox" id="retainingWallCheck" class="w-4 h-4 mt-0.5 rounded text-forest-700 focus:ring-forest-600">
+                                    <div>
+                                        <div class="text-sm font-semibold text-gray-900">Add Hillside Retaining Wall (60 linear ft)</div>
+                                        <div class="text-xs text-gray-500">Engineered structural block with French drainage (+ $3,200)</div>
+                                    </div>
+                                </label>
+
+                                <label class="flex items-start gap-3 p-3 bg-sand-50 rounded-xl border border-gray-200 cursor-pointer hover:bg-sand-100 transition-colors">
+                                    <input type="checkbox" id="outdoorKitchenCheck" class="w-4 h-4 mt-0.5 rounded text-forest-700 focus:ring-forest-600">
+                                    <div>
+                                        <div class="text-sm font-semibold text-gray-900">Include Built-In Gas Outdoor Kitchen Island</div>
+                                        <div class="text-xs text-gray-500">Stone veneer with stainless steel package (+ $16,500)</div>
+                                    </div>
+                                </label>
                             </div>
                         </div>
 
+                        <!-- Tab 3: Softscape Controls -->
                         <div id="panel-softscape" class="estimator-panel space-y-6 hidden">
                             <div>
                                 <label class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Planting Scope Tier</label>
-                                <select id="softscapeTierSelect" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm font-semibold">
-                                    <option value="2800" data-label="Front Yard Refresh">Front Yard Seasonal Refresh (Organic Soil + Native Perennial Color)</option>
-                                    <option value="7500" selected data-label="Bellevue Signature Estate">Bellevue Signature Estate (Specimen Japanese Maples + Native Shrub Beds)</option>
-                                    <option value="18000" data-label="Complete Property Overhaul">Complete Property Overhaul (Grading + Mature Trees + Smart Drip)</option>
+                                <select id="softscapeTierSelect" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm font-semibold focus:ring-2 focus:ring-forest-600">
+                                    <option value="2800" data-label="Front Yard Seasonal Refresh">Front Yard Seasonal Refresh (Soil + Mulch + Perennial Color) — $2,800</option>
+                                    <option value="7500" selected data-label="Bellevue Signature Estate Softscaping">Bellevue Signature Estate (Specimen Japanese Maples + Native Shrub Beds) — $7,500</option>
+                                    <option value="18000" data-label="Complete Property Overhaul">Complete Property Overhaul (Grading + Sod + Specimen Trees + Irrigation) — $18,000</option>
                                 </select>
                             </div>
+
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs font-bold uppercase tracking-wider text-gray-600">Specimen Japanese Maples</label>
+                                    <span id="mapleCountDisplay" class="text-sm font-bold text-forest-800">2 Trees</span>
+                                </div>
+                                <input type="range" id="mapleCountSlider" min="0" max="5" value="2" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between text-[11px] text-gray-400 mt-1">
+                                    <span>0 Trees</span>
+                                    <span>2 Trees</span>
+                                    <span>5 Trees</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 pt-2">
+                                <label class="flex items-start gap-3 p-3 bg-sand-50 rounded-xl border border-gray-200 cursor-pointer hover:bg-sand-100 transition-colors">
+                                    <input type="checkbox" id="irrigationCheck" checked class="w-4 h-4 mt-0.5 rounded text-forest-700 focus:ring-forest-600">
+                                    <div>
+                                        <div class="text-sm font-semibold text-gray-900">Smart Drip Irrigation &amp; "Plant Insurance"</div>
+                                        <div class="text-xs text-gray-500">Wi-Fi controller &amp; zone calibration (+ $1,450)</div>
+                                    </div>
+                                </label>
+
+                                <label class="flex items-start gap-3 p-3 bg-sand-50 rounded-xl border border-gray-200 cursor-pointer hover:bg-sand-100 transition-colors">
+                                    <input type="checkbox" id="soilPrepCheck" checked class="w-4 h-4 mt-0.5 rounded text-forest-700 focus:ring-forest-600">
+                                    <div>
+                                        <div class="text-sm font-semibold text-gray-900">Gardner &amp; Bloome Organic Soil &amp; Mulch Base</div>
+                                        <div class="text-xs text-gray-500">Deep soil conditioning for PNW clay (+ $850)</div>
+                                    </div>
+                                </label>
+                            </div>
                         </div>
+
                     </div>
 
+                    <!-- Reactive Estimate Summary Column -->
                     <div class="lg:col-span-5 flex flex-col justify-between bg-forest-50 p-6 sm:p-8 rounded-2xl border border-forest-100">
                         <div>
-                            <span class="text-xs font-bold uppercase tracking-wider text-forest-700">Project Feasibility &amp; Technical Scope</span>
+                            <span class="text-xs font-bold uppercase tracking-wider text-forest-700">Calculated Investment Range</span>
+                            
                             <div class="mt-3 mb-6">
-                                <div id="estimateRangeDisplay" class="text-2xl sm:text-3xl font-serif font-bold text-forest-900">Turn-Key Installation Scope</div>
-                                <div class="text-xs text-gray-500 mt-1">Detailed, itemized proposal prepared after on-site arborist walk and elevation survey.</div>
+                                <div id="estimateRangeDisplay" class="text-3xl sm:text-4xl font-serif font-bold text-forest-900">
+                                    $2,350 – $4,450
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1">
+                                    *Includes recommended <strong>5–10% Eastside project contingency</strong> for legacy root systems and unmapped drainage lines.
+                                </div>
                             </div>
+
                             <div class="space-y-2.5 text-xs text-gray-700 border-t border-forest-200/60 pt-4 mb-6">
-                                <div class="flex justify-between"><span class="text-gray-600">Primary Selection:</span><span id="summaryPrimary" class="font-semibold text-forest-900">Medium Conifer (25-50ft)</span></div>
-                                <div class="flex justify-between"><span class="text-gray-600">Permit &amp; Code:</span><span id="summaryPermit" class="font-semibold text-forest-900">BCC 20.20 Arborist Prep Included</span></div>
-                                <div class="flex justify-between"><span class="text-gray-600">Nursery Warranty:</span><span class="font-semibold text-emerald-800">1-Year Health Guarantee</span></div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Primary Selection:</span>
+                                    <span id="summaryPrimary" class="font-semibold text-forest-900 text-right">Medium Conifer (25-50ft)</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Quantity / Scale:</span>
+                                    <span id="summaryScale" class="font-semibold text-forest-900">1 Tree</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Permit &amp; Code:</span>
+                                    <span id="summaryPermit" class="font-semibold text-forest-900">BCC 20.20 Arborist Prep Included</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Nursery Warranty:</span>
+                                    <span class="font-semibold text-emerald-800">1-Year Health Guarantee</span>
+                                </div>
                             </div>
                         </div>
 
-                        <button id="estimatorLockBtn" class="w-full bg-forest-700 hover:bg-forest-800 text-white font-bold py-3.5 px-6 rounded-xl shadow text-sm">
-                            Book On-Site Property Survey &rarr;
-                        </button>
+                        <div class="space-y-3 pt-4 border-t border-forest-200/60">
+                            <button id="estimatorLockBtn" class="w-full bg-forest-700 hover:bg-forest-800 text-white font-bold py-3.5 px-6 rounded-xl shadow transition-all text-sm flex items-center justify-center gap-2">
+                                <span>Lock In Estimate &amp; Book Survey</span>
+                                <span>&rarr;</span>
+                            </button>
+                            <div class="text-center text-[11px] text-gray-500">
+                                Direct Line: <a href="tel:4254544417" class="font-semibold text-forest-800 underline">(425) 454-4417</a> • Bellevue Nursery Ops
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -553,143 +965,222 @@
     <section id="potting-bar" class="py-20 bg-sand-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Bespoke Botanical Staging</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Custom Container Service</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mt-2">The Bellevue Nursery Potting Bar</h2>
                 <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                    Select your architectural glazed container, pair it with hand-selected indoor tropical foliage, and our horticultural artisans will custom-stage it with organic Gardner &amp; Bloome soil and basalt river stone for pickup or delivery.
+                    Select your architectural glazed container, pair it with hand-selected indoor tropical foliage, and our horticultural specialists will custom-pot it with organic Gardner &amp; Bloome soil and top dressing for mess-free living room pickup or delivery.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Potting Builder Controls (Col 7) -->
                 <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 space-y-6">
+                    <!-- Step 1: Select Pot -->
                     <div>
                         <div class="flex justify-between items-center mb-3">
                             <span class="text-xs font-bold uppercase tracking-wider text-forest-800">1. Select Glazed Container</span>
+                            <span class="text-xs text-gray-500">Washington Pottery / Accent Decor</span>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                            <button class="pot-btn active text-left p-3 rounded-xl border border-forest-600 bg-forest-50" data-name="Glazed Cylinder Set (S/3)">
+                            <button class="pot-btn active text-left p-3 rounded-xl border border-forest-600 bg-forest-50 transition-all" data-price="36" data-name="Glazed Cylinder Set (S/3)">
                                 <div class="text-lg">🏺</div>
-                                <div class="text-xs font-bold text-forest-900 mt-1">Glazed Cylinder (S/3)</div>
-                                <div class="text-[11px] font-semibold text-emerald-700">In Stock • S/3 Set</div>
+                                <div class="text-xs font-bold text-forest-900 mt-1">Glazed Cylinder (Set of 3)</div>
+                                <div class="text-[11px] font-bold text-terracotta-600">$36.00</div>
                             </button>
-                            <button class="pot-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50" data-name="7&quot; Bell Planter + Saucer">
+                            <button class="pot-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50 hover:bg-sand-100 transition-all" data-price="32" data-name="7&quot; Bell Planter + Saucer">
                                 <div class="text-lg">🪴</div>
-                                <div class="text-xs font-bold text-gray-800 mt-1">7" Bell Planter</div>
-                                <div class="text-[11px] font-semibold text-emerald-700">In Stock • High-Fire</div>
+                                <div class="text-xs font-bold text-gray-800 mt-1">7" Bell Planter with Saucer</div>
+                                <div class="text-[11px] font-bold text-terracotta-600">$32.00</div>
                             </button>
-                            <button class="pot-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50" data-name="10&quot; Tuscan Terracotta">
+                            <button class="pot-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50 hover:bg-sand-100 transition-all" data-price="24" data-name="10&quot; Tuscan Terracotta">
                                 <div class="text-lg">🏺</div>
                                 <div class="text-xs font-bold text-gray-800 mt-1">10" Tuscan Terracotta</div>
-                                <div class="text-[11px] font-semibold text-emerald-700">In Stock • Italian Clay</div>
+                                <div class="text-[11px] font-bold text-terracotta-600">$24.00</div>
                             </button>
-                            <button class="pot-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50" data-name="14&quot; Architectural Patio Urn">
+                            <button class="pot-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50 hover:bg-sand-100 transition-all" data-price="85" data-name="14&quot; Architectural Patio Urn">
                                 <div class="text-lg">🏛️</div>
-                                <div class="text-xs font-bold text-gray-800 mt-1">14" Patio Urn</div>
-                                <div class="text-[11px] font-semibold text-emerald-700">In Stock • Patio Scale</div>
+                                <div class="text-xs font-bold text-gray-800 mt-1">14" Architectural Patio Urn</div>
+                                <div class="text-[11px] font-bold text-terracotta-600">$85.00</div>
                             </button>
                         </div>
                     </div>
 
+                    <!-- Step 2: Select Plant -->
                     <div>
                         <div class="flex justify-between items-center mb-3">
-                            <span class="text-xs font-bold uppercase tracking-wider text-forest-800">2. Select Live Plant</span>
+                            <span class="text-xs font-bold uppercase tracking-wider text-forest-800">2. Select Live Acclimatized Plant</span>
+                            <span class="text-xs text-gray-500">Cascade Tropicals Nursery</span>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                            <button class="plant-btn active text-left p-3 rounded-xl border border-forest-600 bg-forest-50" data-name="6&quot; Monstera Deliciosa">
+                            <button class="plant-btn active text-left p-3 rounded-xl border border-forest-600 bg-forest-50 transition-all" data-price="32" data-name="6&quot; Monstera Deliciosa">
                                 <div class="text-lg">🌿</div>
-                                <div class="text-xs font-bold text-forest-900 mt-1">6" Monstera</div>
-                                <div class="text-[11px] font-semibold text-emerald-700">Acclimatized Foliage</div>
+                                <div class="text-xs font-bold text-forest-900 mt-1">6" Monstera Deliciosa</div>
+                                <div class="text-[11px] font-bold text-terracotta-600">$32.00</div>
                             </button>
-                            <button class="plant-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50" data-name="6&quot; Laurentii Snake Plant">
+                            <button class="plant-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50 hover:bg-sand-100 transition-all" data-price="28" data-name="6&quot; Laurentii Snake Plant">
                                 <div class="text-lg">🌱</div>
-                                <div class="text-xs font-bold text-gray-800 mt-1">6" Snake Plant</div>
-                                <div class="text-[11px] font-semibold text-emerald-700">Low-Light Hardy</div>
+                                <div class="text-xs font-bold text-gray-800 mt-1">6" Laurentii Snake Plant</div>
+                                <div class="text-[11px] font-bold text-terracotta-600">$28.00</div>
                             </button>
-                            <button class="plant-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50" data-name="8&quot; Fiddle Leaf Fig">
+                            <button class="plant-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50 hover:bg-sand-100 transition-all" data-price="48" data-name="8&quot; Fiddle Leaf Fig">
                                 <div class="text-lg">🌳</div>
                                 <div class="text-xs font-bold text-gray-800 mt-1">8" Fiddle Leaf Fig</div>
-                                <div class="text-[11px] font-semibold text-emerald-700">Greenhouse Specimen</div>
+                                <div class="text-[11px] font-bold text-terracotta-600">$48.00</div>
                             </button>
-                            <button class="plant-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50" data-name="6&quot; Satin Pothos">
+                            <button class="plant-btn text-left p-3 rounded-xl border border-gray-200 bg-sand-50 hover:bg-sand-100 transition-all" data-price="34" data-name="6&quot; Rare Satin Pothos">
                                 <div class="text-lg">🍃</div>
-                                <div class="text-xs font-bold text-gray-800 mt-1">6" Satin Pothos</div>
-                                <div class="text-[11px] font-semibold text-emerald-700">Cascade Tropicals</div>
+                                <div class="text-xs font-bold text-gray-800 mt-1">6" Rare Satin Pothos</div>
+                                <div class="text-[11px] font-bold text-terracotta-600">$34.00</div>
                             </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Bench Potting & Dressing -->
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-bold uppercase tracking-wider text-forest-800">3. Potting Bar Service &amp; Top Dressing</span>
+                            <span id="freePottingBadge" class="hidden text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Complimentary (Over $100)</span>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="flex items-center justify-between p-3 rounded-xl border border-gray-200 bg-sand-50 cursor-pointer hover:bg-sand-100">
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" name="pottingService" value="15" checked class="text-forest-700 focus:ring-forest-600">
+                                    <div>
+                                        <div class="text-xs font-bold text-gray-900">Standard Bench Potting</div>
+                                        <div class="text-[11px] text-gray-500">Gardner &amp; Bloome organic potting mix + drainage screening</div>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-bold text-forest-900">$15.00</span>
+                            </label>
+                            <label class="flex items-center justify-between p-3 rounded-xl border border-gray-200 bg-sand-50 cursor-pointer hover:bg-sand-100">
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" name="pottingService" value="25" class="text-forest-700 focus:ring-forest-600">
+                                    <div>
+                                        <div class="text-xs font-bold text-gray-900">Deluxe Botanical Staging</div>
+                                        <div class="text-[11px] text-gray-500">Organic soil + Basalt river pebbles + preserved forest moss finish</div>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-bold text-forest-900">$25.00</span>
+                            </label>
+                            <label class="flex items-center justify-between p-3 rounded-xl border border-gray-200 bg-sand-50 cursor-pointer hover:bg-sand-100">
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" name="pottingService" value="0" class="text-forest-700 focus:ring-forest-600">
+                                    <div>
+                                        <div class="text-xs font-bold text-gray-900">DIY / Take Unpotted</div>
+                                        <div class="text-[11px] text-gray-500">Pot and plant packed securely in separate nursery carriers</div>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-bold text-gray-500">$0.00</span>
+                            </label>
                         </div>
                     </div>
                 </div>
 
+                <!-- Live Potting Receipt Card (Col 5) -->
                 <div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200">
                     <div class="flex justify-between items-center border-b border-gray-100 pb-3 mb-4">
-                        <h4 class="font-serif text-lg font-bold text-forest-900">Custom Arrangement Status</h4>
+                        <h4 class="font-serif text-lg font-bold text-forest-900">Live Custom Arrangement</h4>
                         <span class="text-[11px] font-semibold text-terracotta-600 bg-terracotta-100 px-2 py-0.5 rounded">Ready in 2 Hours</span>
                     </div>
 
                     <div class="space-y-3 text-xs mb-6">
-                        <div class="flex justify-between"><span class="text-gray-600">Container:</span><span id="receiptPotName" class="font-semibold text-forest-900">Glazed Cylinder Set (S/3)</span></div>
-                        <div class="flex justify-between"><span class="text-gray-600">Plant:</span><span id="receiptPlantName" class="font-semibold text-forest-900">6" Monstera Deliciosa</span></div>
-                        <div class="flex justify-between"><span class="text-gray-600">Soil Medium:</span><span class="font-semibold text-emerald-800">Gardner &amp; Bloome Organic OMRI</span></div>
-                        <div class="flex justify-between pt-2 border-t border-gray-100"><span class="text-gray-600">Warranty:</span><span class="font-semibold text-emerald-700">90-Day Living Guarantee</span></div>
+                        <div class="flex justify-between items-center">
+                            <span id="receiptPotName" class="text-gray-600">Glazed Cylinder Set (S/3)</span>
+                            <span id="receiptPotPrice" class="font-bold text-gray-900">$36.00</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span id="receiptPlantName" class="text-gray-600">6" Monstera Deliciosa</span>
+                            <span id="receiptPlantPrice" class="font-bold text-gray-900">$32.00</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span id="receiptServiceName" class="text-gray-600">Standard Bench Potting</span>
+                            <span id="receiptServicePrice" class="font-bold text-gray-900">$15.00</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-2 border-t border-gray-100 text-gray-500">
+                            <span>Washington Retail Tax (10.3%)</span>
+                            <span id="receiptTax" class="font-medium">$8.55</span>
+                        </div>
                     </div>
 
                     <div class="bg-forest-900 text-white p-5 rounded-xl mb-6">
-                        <div class="text-xs text-emerald-200 uppercase tracking-wider font-semibold">Service Status</div>
-                        <div class="text-2xl font-serif font-bold text-white mt-1">Complimentary Bench Potting</div>
-                        <div class="text-[11px] text-emerald-300/80 mt-1">Includes drainage screening, custom soil blend, and river pebble dressing.</div>
+                        <div class="text-xs text-emerald-200 uppercase tracking-wider font-semibold">Total Packaged Price</div>
+                        <div id="receiptTotal" class="text-3xl font-serif font-bold text-white mt-1">$91.55</div>
+                        <div class="text-[11px] text-emerald-300/80 mt-1">Includes soil, conditioning, and 90-day nursery plant care warranty.</div>
                     </div>
 
-                    <button id="reservePottingBtn" class="w-full bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold py-3.5 px-4 rounded-xl shadow transition-all text-sm">
-                        Reserve Custom Staging for Pickup &rarr;
+                    <button id="reservePottingBtn" class="w-full bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold py-3.5 px-4 rounded-xl shadow transition-all text-sm flex items-center justify-center gap-2">
+                        <span>Reserve for Express In-Store Pickup</span>
+                        <span>&rarr;</span>
                     </button>
+                    <div class="text-center text-[11px] text-gray-400 mt-3">
+                        Local Eastside delivery available ($25 flat in Bellevue / Medina).
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- SECTION 5: HOLIDAY COLLECTION & ADVISORY -->
+    <!-- SECTION 5: HOLIDAY COLLECTION & NOBLE FIR PRE-ORDERS -->
     <section id="holiday" class="py-20 bg-forest-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-amber-300">Holiday 2026 Collection</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">Custom Holiday Porch Planters &amp; Fir Trees</h2>
                 <p class="text-emerald-100 text-sm mt-3 leading-relaxed">
-                    Handcrafted to order by our greenhouse artisans. Fresh-cut Pacific Northwest noble fir, fragrant cedar tips, berried juniper, and natural birch poles.
+                    Elevate your Eastside entrance with handcrafted holiday porch planters designed with fresh-cut Pacific Northwest Noble fir, fragrant cedar tips, berried juniper, and natural birch poles. Secure yours today with a $50 deposit.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 flex flex-col justify-between">
                     <div>
                         <div class="text-xs font-bold uppercase tracking-wider text-amber-300">Front Porch Classic</div>
                         <h3 class="font-serif text-2xl font-bold mt-1 text-white">18" Classic Bellevue Porch Pot</h3>
-                        <p class="text-emerald-100 text-xs mt-3 leading-relaxed">Lush arrangement of noble fir, western red cedar, ponderosa pine cones, and red dogwood twigs.</p>
-                        <div class="text-lg font-serif font-bold text-amber-200 mt-4">Handcrafted Container Design</div>
+                        <p class="text-emerald-100 text-xs mt-3 leading-relaxed">
+                            A lush arrangement of noble fir, western red cedar, ponderosa pine cones, and red dogwood twigs set in a frost-resistant ceramic container.
+                        </p>
+                        <div class="text-2xl font-serif font-bold text-white mt-4">$195.00</div>
+                        <div class="text-[11px] text-emerald-200 mt-0.5">$50 cash deposit secures production slot.</div>
                     </div>
-                    <button class="holiday-reserve-btn w-full mt-6 bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold py-2.5 rounded-xl text-xs transition-colors" data-item="18&quot; Classic Bellevue Porch Pot">
-                        Reserve Custom Porch Pot
+                    <button class="holiday-deposit-btn w-full mt-6 bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold py-2.5 rounded-xl text-xs transition-colors" data-item="18&quot; Classic Bellevue Porch Pot ($195)">
+                        Reserve With $50 Deposit
                     </button>
                 </div>
 
-                <div class="bg-forest-800 rounded-2xl p-6 border-2 border-amber-300 shadow-xl flex flex-col justify-between">
+                <!-- Product 2 (Featured) -->
+                <div class="bg-forest-800 rounded-2xl p-6 border-2 border-amber-300 shadow-xl flex flex-col justify-between relative">
+                    <span class="absolute -top-3 right-6 bg-amber-300 text-forest-900 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full">
+                        Most Popular
+                    </span>
                     <div>
                         <div class="text-xs font-bold uppercase tracking-wider text-amber-300">Signature Estate Size</div>
                         <h3 class="font-serif text-2xl font-bold mt-1 text-white">24" Grand Estate Winter Urn</h3>
-                        <p class="text-emerald-100 text-xs mt-3 leading-relaxed">Stately double-height winter arrangement with towering white birch poles, mixed conifer greens, and warm micro-LEDs.</p>
-                        <div class="text-lg font-serif font-bold text-amber-200 mt-4">Signature Double-Height Urn</div>
+                        <p class="text-emerald-100 text-xs mt-3 leading-relaxed">
+                            Stately double-height winter arrangement with towering white birch poles, mixed conifer greens, berried juniper, and integrated warm micro-LED lights.
+                        </p>
+                        <div class="text-2xl font-serif font-bold text-white mt-4">$350.00</div>
+                        <div class="text-[11px] text-emerald-200 mt-0.5">$50 cash deposit secures production slot.</div>
                     </div>
-                    <button class="holiday-reserve-btn w-full mt-6 bg-amber-300 hover:bg-amber-400 text-forest-900 font-extrabold py-2.5 rounded-xl text-xs transition-colors" data-item="24&quot; Grand Estate Winter Urn">
-                        Reserve Estate Winter Urn
+                    <button class="holiday-deposit-btn w-full mt-6 bg-amber-300 hover:bg-amber-400 text-forest-900 font-extrabold py-2.5 rounded-xl text-xs transition-colors" data-item="24&quot; Grand Estate Winter Urn ($350)">
+                        Reserve With $50 Deposit
                     </button>
                 </div>
 
+                <!-- Product 3 -->
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 flex flex-col justify-between">
                     <div>
                         <div class="text-xs font-bold uppercase tracking-wider text-amber-300">Fresh Nursery Greens</div>
                         <h3 class="font-serif text-2xl font-bold mt-1 text-white">Fresh-Cut Noble Fir Trees</h3>
-                        <p class="text-emerald-100 text-xs mt-3 leading-relaxed">7ft–12ft Washington Noble and Fraser firs. Fresh-cut and water-stand conditioned at our Bellevue yard.</p>
-                        <div class="text-lg font-serif font-bold text-amber-200 mt-4">Puget Sound Grade-A Harvest</div>
+                        <p class="text-emerald-100 text-xs mt-3 leading-relaxed">
+                            Locally grown, hand-graded 7ft–12ft Washington Noble and Fraser firs. Fresh-cut and water-stand conditioned at our Bellevue yard.
+                        </p>
+                        <div class="text-2xl font-serif font-bold text-white mt-4">$85 – $185</div>
+                        <div class="text-[11px] text-emerald-200 mt-0.5">Pre-order deposit guarantees size &amp; species choice.</div>
                     </div>
-                    <button class="holiday-reserve-btn w-full mt-6 bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold py-2.5 rounded-xl text-xs transition-colors" data-item="Fresh-Cut Noble Fir">
+                    <button class="holiday-deposit-btn w-full mt-6 bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold py-2.5 rounded-xl text-xs transition-colors" data-item="Fresh-Cut Noble Fir Pre-Order">
                         Reserve Tree Allocation
                     </button>
                 </div>
@@ -697,55 +1188,159 @@
         </div>
     </section>
 
-    <!-- SECTION 6: CLINICS, TRADE & CONTACT -->
-    <section id="clinics" class="py-16 bg-white border-b border-gray-200">
+    
+    <!-- SECTION 5B: COMMERCIAL B2B CORPORATE PLANSTCAPING -->
+    <section id="commercial" class="py-20 bg-sand-50 border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-sand-50 rounded-3xl p-8 sm:p-10 border border-gray-200 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Educational Clinics</span>
-                    <h3 class="font-serif text-2xl font-bold text-forest-900 mt-1">WSU Master Gardener Saturday Diagnostic Clinics</h3>
-                    <p class="text-xs text-gray-600 mt-2 max-w-xl">Every Saturday 10:00 AM – 2:00 PM (April to Sept). Bring your plant cuttings and questions for complimentary diagnosis.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Commercial Services</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 leading-tight">Corporate Plantscaping &amp; Recurring Office Retainers</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">Transform your Downtown Bellevue tech suites and executive offices into lush biophilic workspaces. We supply architectural planters, healthy tropical foliage, and weekly white-glove plant care.</p>
+                    <div class="space-y-3 pt-2 text-xs text-gray-700">
+                        <div class="flex items-start gap-3"><span class="text-forest-700 font-bold text-base">✓</span><div><strong>Weekly Horticultural Care:</strong> Discreet watering, pruning, pest inspection, and leaf cleaning.</div></div>
+                        <div class="flex items-start gap-3"><span class="text-forest-700 font-bold text-base">✓</span><div><strong>Zero-Risk Replacement Guarantee:</strong> Seasonal plant replacement included at no extra charge.</div></div>
+                        <div class="flex items-start gap-3"><span class="text-forest-700 font-bold text-base">✓</span><div><strong>Aesthetic Curation:</strong> Concrete, matte black, and brass planters with air-purifying indoor foliage.</div></div>
+                    </div>
                 </div>
-                <a href="tel:4254545531" class="bg-forest-700 hover:bg-forest-800 text-white font-bold px-6 py-3 rounded-xl text-xs shrink-0 transition-colors">Call Store Desk: (425) 454-5531</a>
+                <div class="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm">
+                    <h3 class="font-serif text-xl font-bold text-forest-900 mb-4">Monthly Maintenance Retainers</h3>
+                    <div class="space-y-3 mb-6">
+                        <div class="p-4 bg-sand-50 rounded-xl border border-gray-200 flex justify-between items-center">
+                            <div><div class="text-sm font-bold text-forest-900">Executive Suite (Up to 10 Plants)</div><div class="text-xs text-gray-500">Weekly watering, cleaning, and nutrient feed</div></div>
+                            <span class="text-base font-bold text-forest-800">89<span class="text-xs font-normal text-gray-500">/mo</span></span>
+                        </div>
+                        <div class="p-4 bg-sand-50 rounded-xl border-2 border-forest-600 flex justify-between items-center">
+                            <div><div class="text-sm font-bold text-forest-900">Corporate Floor (15–30 Plants)</div><div class="text-xs text-gray-500">Bi-weekly deep care + plant replacements</div></div>
+                            <span class="text-base font-bold text-forest-800">49<span class="text-xs font-normal text-gray-500">/mo</span></span>
+                        </div>
+                        <div class="p-4 bg-sand-50 rounded-xl border border-gray-200 flex justify-between items-center">
+                            <div><div class="text-sm font-bold text-forest-900">Tech Campus / HQ (40+ Plants)</div><div class="text-xs text-gray-500">Full facility biophilic management</div></div>
+                            <span class="text-base font-bold text-forest-800">99+<span class="text-xs font-normal text-gray-500">/mo</span></span>
+                        </div>
+                    </div>
+                    <button id="b2bWalkBtn" class="w-full bg-forest-700 hover:bg-forest-800 text-white font-bold py-3.5 rounded-xl text-xs transition-colors">Request Complimentary Corporate Site Walk</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 8: CONTACT & LOCATION -->
-    <section id="contact" class="py-20 bg-sand-50">
+    <!-- SECTION 6: MASTER GARDENER CLINICS & COMMUNITY -->
+    <section id="clinics" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-sand-50 rounded-3xl p-8 sm:p-12 border border-gray-200">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Community &amp; Horticultural Education</span>
+                        <h2 class="font-serif text-3xl font-bold text-forest-900">WSU Master Gardener Diagnostic Clinics</h2>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Bellevue Nursery proudly hosts official WSU Master Gardener Diagnostic Clinics every Saturday from <strong>10:00 AM to 2:00 PM</strong> (April through September). Bring your gardening questions, soil samples, and affected plant cuttings in sealed plastic Ziploc bags for complimentary scientific diagnosis.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs text-gray-700">
+                            <div class="p-3 bg-white rounded-xl border border-gray-200">
+                                <strong class="text-forest-900 block mb-1">🌿 Plant Pest &amp; Disease ID</strong>
+                                Identify aphids, scale, powdery mildew, and root fungal issues.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-gray-200">
+                                <strong class="text-forest-900 block mb-1">🧪 PNW Soil &amp; Nutrient Testing</strong>
+                                Guidance on amending glacial till and heavy clay.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 bg-forest-900 text-white p-6 sm:p-8 rounded-2xl text-center space-y-4">
+                        <div class="text-xs font-bold uppercase tracking-widest text-amber-300">Saturday Schedule</div>
+                        <div class="text-2xl font-serif font-bold">10:00 AM – 2:00 PM</div>
+                        <p class="text-xs text-emerald-100/80">Held in the main greenhouse corridor at 842 104th Ave SE. Free and open to all Eastside gardeners.</p>
+                        <a href="tel:4254545531" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs px-6 py-3 rounded-xl transition-colors">
+                            Ask a Staff Horticulturist: (425) 454-5531
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: TRADE CONTRACTOR PROGRAM -->
+    <section id="trade" class="py-16 bg-sand-100 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 p-8 bg-white rounded-2xl border border-gray-200">
+                <div class="space-y-1">
+                    <span class="text-xs font-bold uppercase tracking-widest text-forest-700">Trade Professional Account</span>
+                    <h3 class="font-serif text-2xl font-bold text-forest-900">Are You an Eastside Landscape Contractor?</h3>
+                    <p class="text-xs text-gray-600 max-w-2xl">
+                        Join our Trade Professional Program. Licensed landscape contractors with active Washington Department of Revenue reseller permits receive <strong>15% wholesale discounts on nursery stock</strong> and <strong>10% on pottery</strong> with priority loading and job-site staging.
+                    </p>
+                </div>
+                <button id="tradeApplyBtn" class="bg-forest-700 hover:bg-forest-800 text-white font-bold px-6 py-3 rounded-xl text-xs whitespace-nowrap transition-colors">
+                    Apply for Contractor Account
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: CONTACT, HOURS & LOCATION -->
+    <section id="contact" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Plan Your Visit</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mt-2">Visit Bellevue Nursery</h2>
-                <p class="text-gray-600 text-sm mt-3">Conveniently located in Downtown Bellevue, blocks from Bellevue Square and Meydenbauer Bay.</p>
+                <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                    Conveniently located in Downtown Bellevue, just blocks from Bellevue Square and Meydenbauer Bay. Dedicated customer parking lot on-site.
+                </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl border border-gray-200 space-y-4 shadow-sm">
+                <!-- Location Info -->
+                <div class="bg-sand-50 p-8 rounded-2xl border border-gray-200 space-y-4">
                     <h3 class="font-serif text-xl font-bold text-forest-900">Store Address</h3>
                     <div class="text-sm text-gray-600 space-y-1">
                         <div class="font-bold text-forest-900">Bellevue Nursery</div>
-                        <div>842 104th Ave SE, Bellevue, WA 98004</div>
+                        <div>842 104th Ave SE</div>
+                        <div>Bellevue, WA 98004</div>
                         <div class="pt-2 text-xs text-gray-500">Cross streets: SE 8th St &amp; 104th Ave SE</div>
                     </div>
                     <div class="pt-4 border-t border-gray-200">
-                        <a href="https://maps.google.com/?q=842+104th+Ave+SE,+Bellevue,+WA+98004" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-terracotta-600 hover:underline">Open in Google Maps &rarr;</a>
+                        <a href="https://maps.google.com/?q=842+104th+Ave+SE,+Bellevue,+WA+98004" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-terracotta-600 hover:underline">
+                            <span>Open in Google Maps</span>
+                            <span>&rarr;</span>
+                        </a>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl border border-gray-200 space-y-4 shadow-sm">
-                    <h3 class="font-serif text-xl font-bold text-forest-900">Operating Hours</h3>
+                <!-- Operating Hours -->
+                <div class="bg-sand-50 p-8 rounded-2xl border border-gray-200 space-y-4">
+                    <h3 class="font-serif text-xl font-bold text-forest-900">Current Hours</h3>
                     <div class="text-sm text-gray-600 space-y-2">
-                        <div class="flex justify-between py-1 border-b border-gray-100"><span>Monday – Saturday</span><span class="font-bold text-forest-900">9:00 AM – 6:00 PM</span></div>
-                        <div class="flex justify-between py-1 border-b border-gray-100"><span>Sunday</span><span class="font-bold text-forest-900">10:00 AM – 5:00 PM</span></div>
+                        <div class="flex justify-between py-1 border-b border-gray-200">
+                            <span>Monday – Saturday</span>
+                            <span class="font-bold text-forest-900">9:00 AM – 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-gray-200">
+                            <span>Sunday</span>
+                            <span class="font-bold text-forest-900">10:00 AM – 5:00 PM</span>
+                        </div>
+                        <div class="text-xs text-gray-400 pt-2">
+                            *Winter hours may adjust slightly during heavy snowfall or freezing conditions.
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl border border-gray-200 space-y-4 shadow-sm">
+                <!-- Contact & Inquiries -->
+                <div class="bg-sand-50 p-8 rounded-2xl border border-gray-200 space-y-4">
                     <h3 class="font-serif text-xl font-bold text-forest-900">Get In Touch</h3>
                     <div class="text-sm text-gray-600 space-y-2">
-                        <div><span class="text-xs text-gray-500 block">Retail Store Desk:</span><a href="tel:4254545531" class="font-bold text-forest-800 hover:underline">(425) 454-5531</a></div>
-                        <div><span class="text-xs text-gray-500 block">We Plant It For You Operations:</span><a href="tel:4254544417" class="font-bold text-forest-800 hover:underline">(425) 454-4417</a></div>
+                        <div>
+                            <span class="text-xs text-gray-500 block">Retail Nursery Store Desk:</span>
+                            <a href="tel:4254545531" class="font-bold text-forest-800 hover:underline">(425) 454-5531</a>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-500 block">We Plant It For You Operations:</span>
+                            <a href="tel:4254544417" class="font-bold text-forest-800 hover:underline">(425) 454-4417</a>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-500 block">Email Correspondence:</span>
+                            <a href="mailto:info@bellevuenursery.com" class="font-bold text-terracotta-600 hover:underline">info@bellevuenursery.com</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -763,11 +1358,13 @@
                 <button id="closeModalBtn" class="text-gray-400 hover:text-gray-600 p-2 text-xl">&times;</button>
             </div>
 
+            <!-- Form View -->
             <form id="consultForm" class="space-y-4">
                 <div>
                     <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Full Name *</label>
                     <input type="text" id="custName" required placeholder="Fai Lian" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-forest-600">
                 </div>
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Phone Number *</label>
@@ -778,193 +1375,987 @@
                         <input type="email" id="custEmail" required placeholder="fai@bellevuenursery.com" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-forest-600">
                     </div>
                 </div>
+
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Project Scope Target</label>
-                    <select id="custBudget" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-forest-600">
-                        <option value="pots">Container &amp; Houseplant Refresh</option>
-                        <option value="beds">Garden Bed Softscaping &amp; Soil Conditioning</option>
-                        <option value="tree" selected>Specimen Tree Planting &amp; Arborist Pruning</option>
-                        <option value="hardscape">Bluestone Patios &amp; Retaining Walls</option>
-                        <option value="master">Comprehensive Estate Landscape Redesign</option>
-                    </select>
+                    <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Property Address / Neighborhood *</label>
+                    <input type="text" id="custAddress" required placeholder="842 104th Ave SE, Bellevue, WA" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-forest-600">
                 </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Service Requested</label>
+                        <select id="custService" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-forest-600">
+                            <option value="we-plant" selected>We Plant It For You Landscaping</option>
+                            <option value="tree">Tree Care &amp; Hazard Removal</option>
+                            <option value="hardscape">Luxury Hardscaping &amp; Patios</option>
+                            <option value="potting">Potting Bar / Planter Order</option>
+                            <option value="holiday">Holiday Porch Pot ($50 Deposit)</option>
+                            <option value="trade">Contractor Trade Account Application</option>
+                            <option value="general">General Nursery Inquiry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Budget Target</label>
+                        <select id="custBudget" class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-forest-600">
+                            <option value="under2k">&lt; $2,000 (Pots / Pruning / Refresh)</option>
+                            <option value="2-5k">$2,000 – $5,000 (Softscaping / Small Patio)</option>
+                            <option value="5-15k" selected>$5,000 – $15,000 (Estate Planting / Patio)</option>
+                            <option value="15-40k">$15,000 – $40,000 (Full Terrace &amp; Wall)</option>
+                            <option value="40k+">$40,000+ (Master Landscape)</option>
+                        </select>
+                    </div>
+                </div>
+
                 <div>
                     <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Project Notes / Details</label>
-                    <textarea id="custNotes" rows="3" placeholder="Tell us about your garden goals..." class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-forest-600"></textarea>
+                    <textarea id="custNotes" rows="3" placeholder="Tell us about your garden goals, tree species, or plant inquiries..." class="w-full bg-sand-50 border border-gray-300 rounded-xl p-3 text-sm focus:ring-2 focus:ring-forest-600"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-forest-700 hover:bg-forest-800 text-white font-bold py-3.5 rounded-xl shadow text-sm transition-colors">
-                    Submit Request to Bellevue Nursery Desk
-                </button>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-forest-700 hover:bg-forest-800 text-white font-bold py-3.5 rounded-xl shadow text-sm transition-colors">
+                        Submit Request to Bellevue Nursery Desk
+                    </button>
+                    <p class="text-center text-[11px] text-gray-400 mt-2">Zero-obligation consultation. Licensed, bonded, and insured (WA #BELLEVN842).</p>
+                </div>
             </form>
 
+            <!-- Success Confirmation Screen -->
             <div id="modalSuccess" class="hidden text-center py-6 space-y-4">
-                <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-3xl mx-auto">✓</div>
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-3xl mx-auto">
+                    ✓
+                </div>
                 <h4 class="font-serif text-2xl font-bold text-forest-900">Request Confirmed!</h4>
-                <p class="text-xs text-gray-600 max-w-sm mx-auto">Our staff horticulturist and landscape operations team will contact you within 24 business hours.</p>
-                <button id="closeSuccessBtn" class="bg-forest-700 hover:bg-forest-800 text-white font-semibold text-xs px-6 py-2.5 rounded-lg">Close Window</button>
+                <p class="text-xs text-gray-600 max-w-sm mx-auto leading-relaxed">
+                    Thank you for choosing Bellevue Nursery. Our staff horticulturist and landscape desk has received your request.
+                </p>
+                
+                <div class="bg-sand-50 p-4 rounded-xl border border-gray-200 text-xs text-left max-w-sm mx-auto space-y-1.5">
+                    <div><strong>Confirmation Code:</strong> <span id="confCodeDisplay" class="font-mono text-terracotta-600 font-bold">BN-2026-8812</span></div>
+                    <div><strong>Response Time:</strong> Within 24 business hours</div>
+                    <div><strong>Store Desk:</strong> (425) 454-5531</div>
+                </div>
+
+                <button id="closeSuccessBtn" class="bg-forest-700 hover:bg-forest-800 text-white font-semibold text-xs px-6 py-2.5 rounded-lg transition-colors">
+                    Close Window
+                </button>
             </div>
         </div>
     </div>
 
+    <!-- Toast Notification Element -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 z-50 hidden bg-forest-900 text-white px-5 py-3.5 rounded-xl shadow-2xl border border-forest-700 flex items-center gap-3 text-xs transition-all">
+        <span class="text-emerald-400 text-lg">✓</span>
+        <span id="toastMessage">Success</span>
+    </div>
+
     <!-- Master Footer -->
-    <footer class="bg-forest-900 text-white pt-16 pb-12 border-t border-forest-800 text-xs">
+    <footer class="bg-forest-900 text-white pt-16 pb-12 border-t border-forest-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-forest-800">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-forest-800 text-xs">
+                <!-- Col 1 -->
                 <div class="space-y-4">
                     <div class="font-serif text-xl font-bold">BELLEVUE NURSERY</div>
-                    <p class="text-emerald-200/80 leading-relaxed">Serving Eastside families since 1956 with sustainable gardening, exotic houseplants, architectural containers, and professional landscaping.</p>
-                    <div class="inline-block bg-white/10 px-3 py-1 rounded text-[11px] font-mono text-emerald-300">WA Contractor: #BELLEVN842</div>
+                    <p class="text-emerald-200/80 leading-relaxed">
+                        Serving Eastside families since 1956 with sustainable gardening, exotic houseplants, architectural containers, and professional landscaping.
+                    </p>
+                    <div class="inline-block bg-white/10 px-3 py-1 rounded text-[11px] font-mono text-emerald-300">
+                        WA Contractor: #BELLEVN842
+                    </div>
                 </div>
+
+                <!-- Col 2: Quick Links -->
                 <div class="space-y-3">
                     <div class="font-bold uppercase tracking-wider text-amber-300">Nursery &amp; Store</div>
                     <ul class="space-y-2 text-emerald-100/70">
-                        <li><a href="#nursery" class="hover:text-white">Indoor Houseplants &amp; Tropicals</a></li>
-                        <li><a href="#nursery" class="hover:text-white">Specimen Trees &amp; Japanese Maples</a></li>
-                        <li><a href="#pottery" class="hover:text-white">Glazed Pottery &amp; Planters</a></li>
-                        <li><a href="#supplies" class="hover:text-white">Gardner &amp; Bloome Organic Soils</a></li>
+                        <li><a href="#nursery" class="hover:text-white transition-colors">Indoor Houseplants &amp; Tropicals</a></li>
+                        <li><a href="#nursery" class="hover:text-white transition-colors">Specimen Trees &amp; Japanese Maples</a></li>
+                        <li><a href="#pottery" class="hover:text-white transition-colors">Glazed Pottery &amp; Planters</a></li>
+                        <li><a href="#supplies" class="hover:text-white transition-colors">Gardner &amp; Bloome Organic Soils</a></li>
+                        <li><a href="#clinics" class="hover:text-white transition-colors">Master Gardener Saturday Clinics</a></li>
+                        <li><a href="#trade" class="hover:text-white transition-colors">Contractor Trade Program</a></li>
                     </ul>
                 </div>
+
+                <!-- Col 3: Services Division -->
                 <div class="space-y-3">
                     <div class="font-bold uppercase tracking-wider text-amber-300">We Plant It For You</div>
                     <ul class="space-y-2 text-emerald-100/70">
-                        <li><a href="#we-plant" class="hover:text-white">Turn-Key Landscape Installation</a></li>
-                        <li><a href="#estimator" class="hover:text-white">2026 Landscape Scope &amp; Feasibility</a></li>
-                        <li><a href="#we-plant" class="hover:text-white">ISA Arborist Hazard Tree Removal</a></li>
-                        <li><a href="#potting-bar" class="hover:text-white">In-Store Custom Potting Bar</a></li>
+                        <li><a href="#we-plant" class="hover:text-white transition-colors">Turn-Key Landscape Installation</a></li>
+                        <li><a href="#estimator" class="hover:text-white transition-colors">2026 Instant Project Cost Estimator</a></li>
+                        <li><a href="#we-plant" class="hover:text-white transition-colors">ISA Arborist Hazard Tree Removal</a></li>
+                        <li><a href="#we-plant" class="hover:text-white transition-colors">Bluestone Patios &amp; Retaining Walls</a></li>
+                        <li><a href="#potting-bar" class="hover:text-white transition-colors">In-Store Custom Potting Bar</a></li>
+                        <li><a href="#holiday" class="hover:text-white transition-colors">Holiday Porch Pots ($50 Deposit)</a></li>
                     </ul>
                 </div>
+
+                <!-- Col 4: Store HQ -->
                 <div class="space-y-3">
                     <div class="font-bold uppercase tracking-wider text-amber-300">Store HQ &amp; Hours</div>
                     <div class="text-emerald-100/80 space-y-1">
                         <div class="font-semibold text-white">842 104th Ave SE, Bellevue, WA 98004</div>
                         <div>Store Desk: (425) 454-5531</div>
                         <div>Operations: (425) 454-4417</div>
-                        <div class="pt-2">Mon – Sat: 9:00 AM – 6:00 PM • Sun: 10:00 AM – 5:00 PM</div>
+                        <div class="pt-2">Mon – Sat: 9:00 AM – 6:00 PM</div>
+                        <div>Sun: 10:00 AM – 5:00 PM</div>
+                        <div class="pt-1 text-amber-200">24/7 Emergency Storm Tree Care: (425) 454-4417</div>
                     </div>
                 </div>
             </div>
-            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-emerald-200/60 gap-4">
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-emerald-200/60 gap-4">
                 <div>&copy; 2026 Bellevue Nursery LLC &amp; We Plant It For You. All Rights Reserved.</div>
                 <div>Serving Somerset, Enatai, Vuecrest, Clyde Hill, Medina, Meydenbauer Bay &amp; Yarrow Point.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Interactive JavaScript Engine -->
+    <!-- Interactive Logic Script -->
     <script>
+        // Global Elements
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const consultModal = document.getElementById('consultModal');
         const consultForm = document.getElementById('consultForm');
         const modalSuccess = document.getElementById('modalSuccess');
+        const toastNotification = document.getElementById('toastNotification');
+        const toastMessage = document.getElementById('toastMessage');
 
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+        function showToast(msg) {
+            toastMessage.textContent = msg;
+            toastNotification.classList.remove('hidden');
+            setTimeout(() => {
+                toastNotification.classList.add('hidden');
+            }, 3500);
+        }
 
-        function openConsultModal(svc = 'we-plant') {
+        // Mobile Menu
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Modal Logic
+        function openConsultModal(defaultService = 'we-plant', defaultNotes = '') {
+            document.getElementById('custService').value = defaultService;
+            if (defaultNotes) {
+                document.getElementById('custNotes').value = defaultNotes;
+            }
             consultForm.classList.remove('hidden');
             modalSuccess.classList.add('hidden');
             consultModal.classList.remove('hidden');
         }
-        function closeConsultModal() { consultModal.classList.add('hidden'); }
+        function closeConsultModal() {
+            consultModal.classList.add('hidden');
+        }
 
         document.getElementById('navBookBtn').addEventListener('click', () => openConsultModal());
-        document.getElementById('mobileBookBtn').addEventListener('click', () => { mobileMenu.classList.add('hidden'); openConsultModal(); });
+        document.getElementById('mobileBookBtn').addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            openConsultModal();
+        });
         document.getElementById('wePlantBookBtn').addEventListener('click', () => openConsultModal('we-plant'));
-        const heroConsultBtn = document.getElementById('heroConsultBtn');
-        if (heroConsultBtn) heroConsultBtn.addEventListener('click', () => openConsultModal('we-plant'));
-        document.getElementById('estimatorLockBtn').addEventListener('click', () => openConsultModal('we-plant'));
-        document.getElementById('reservePottingBtn').addEventListener('click', () => openConsultModal('potting'));
-        document.querySelectorAll('.holiday-reserve-btn').forEach(b => b.addEventListener('click', () => openConsultModal('holiday')));
+        const b2bBtn = document.getElementById('b2bWalkBtn'); if (b2bBtn) b2bBtn.addEventListener('click', () => openConsultModal('commercial', 'Requesting B2B Corporate Plantscaping Site Walk for Downtown Bellevue office.'));
+        document.getElementById('tradeApplyBtn').addEventListener('click', () => openConsultModal('trade', 'Applying for 15% / 10% Contractor Wholesale Trade Program with WA Reseller Permit.'));
         document.getElementById('closeModalBtn').addEventListener('click', closeConsultModal);
         document.getElementById('closeSuccessBtn').addEventListener('click', closeConsultModal);
 
+        consultModal.addEventListener('click', (e) => {
+            if (e.target === consultModal) closeConsultModal();
+        });
+
         consultForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            const code = 'BN-2026-' + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('confCodeDisplay').textContent = code;
             consultForm.classList.add('hidden');
             modalSuccess.classList.remove('hidden');
+            showToast('Request submitted! Tracking: ' + code);
         });
 
-        // Tab Switching in Estimator
-        document.querySelectorAll('.tab-btn').forEach(btn => {
+        // -------------------------------------------------------------
+        // 2026 Estimator Logic
+        // -------------------------------------------------------------
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        let currentEstimatorCategory = 'trees';
+
+        tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                tabBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                const cat = btn.getAttribute('data-category');
+                currentEstimatorCategory = btn.getAttribute('data-category');
+                
                 document.querySelectorAll('.estimator-panel').forEach(p => p.classList.add('hidden'));
-                const p = document.getElementById('panel-' + cat);
-                if (p) p.classList.remove('hidden');
+                document.getElementById('panel-' + currentEstimatorCategory).classList.remove('hidden');
+                calculateEstimate();
             });
         });
 
-        // 6 Seasonal Arrivals using 100% Authentic Photos & Zero Prices
-        const SEASONAL_ITEMS = [
-            { name: 'Autumn Pansies & Violas', botanical: 'Viola cornuta • Cold-Hardy Color', badge: '🍂 In Season Now', category: 'fall-color', status: '6-Pack Nursery Tray', care: 'Full / Part Sun • Keep Moist', image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg' },
-            { name: 'Specimen Japanese Maple & Bonsai', botanical: 'Acer palmatum in Glazed Ceramic', badge: '🍁 Peak Fall Color', category: 'trees', status: 'Specimen 7-Gallon / B&B', care: 'Morning Sun / Filtered Shade', image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Shady-border-square-1-square.png' },
-            { name: 'Cascade Fiddle Leaf Fig', botanical: 'Ficus lyrata • Acclimatized', badge: '🌿 Cascade Tropicals Drop', category: 'tropicals', status: '8" Acclimatized Pot', care: 'Bright Indirect Light', image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/ezgif.com-gif-maker-7-scaled-square.jpg' },
-            { name: 'Autumn Harvest & Ornamental Peppers', botanical: 'Capsicum & Pennisetum', badge: '🍂 Bellevue Yard Harvest', category: 'fall-color', status: 'Harvest Container', care: 'Full Sun • Lasts into Winter', image: 'https://bellevuenursery.com/wp-content/uploads/2022/10/Peppers-Millet.jpg' },
-            { name: 'Glazed Cylinder Ceramic Set', botanical: 'Washington Pottery Co. High-Fired', badge: '🏺 Just Unpacked', category: 'pottery', status: 'High-Fired Ceramic Set', care: 'Frost-Resistant High Fire', image: 'https://bellevuenursery.com/wp-content/uploads/2022/11/ezgif.com-gif-maker-8.jpg' },
-            { name: 'Denver Daisy Black-Eyed Susan', botanical: 'Rudbeckia hirta (Nursery Yard)', badge: '⭐ Staff Favorite', category: 'fall-color', status: '1-Gallon Bellevue Yard', care: 'Full Sun • Blooms Late Fall', image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Rudbeckia-Denver-Daisy-square.jpg' }
-        ];
+        const treeSizeSelect = document.getElementById('treeSizeSelect');
+        const treeCountSlider = document.getElementById('treeCountSlider');
+        const treeCountDisplay = document.getElementById('treeCountDisplay');
+        const craneAccessCheck = document.getElementById('craneAccessCheck');
+        const permitPrepCheck = document.getElementById('permitPrepCheck');
 
-        let activeFilter = 'all';
-        function renderSeasonalCards() {
-            const grid = document.getElementById('seasonalCardGrid');
-            if (!grid) return;
-            grid.innerHTML = '';
-            const filtered = SEASONAL_ITEMS.filter(item => activeFilter === 'all' || item.category === activeFilter);
-            filtered.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'bg-white rounded-3xl overflow-hidden border border-gray-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1';
-                card.innerHTML = `
-                    <div>
-                        <div class="relative h-56 sm:h-64 overflow-hidden bg-sand-200">
-                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
-                            <div class="absolute top-3.5 left-3.5"><span class="text-[11px] font-bold px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 shadow-sm">${item.badge}</span></div>
-                            <div class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur-md text-forest-900 text-[11px] font-bold px-3 py-1 rounded-xl shadow-md flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span><span>${item.status}</span></div>
-                        </div>
-                        <div class="p-6">
-                            <div class="text-[11px] font-semibold text-terracotta-600 uppercase tracking-wider mb-1">${item.botanical}</div>
-                            <h3 class="font-serif text-xl font-bold text-forest-900 mb-2">${item.name}</h3>
-                            <div class="bg-sand-50 p-2.5 rounded-xl border border-gray-100 text-[11px] text-forest-800">🌿 ${item.care}</div>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <button onclick="openConsultModal()" class="w-full bg-forest-700 hover:bg-forest-800 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors">Inquire / Reserve for Pickup &rarr;</button>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
+        treeCountSlider.addEventListener('input', (e) => {
+            treeCountDisplay.textContent = e.target.value + (e.target.value === '1' ? ' Tree' : ' Trees');
+            calculateEstimate();
+        });
+        treeSizeSelect.addEventListener('change', calculateEstimate);
+        craneAccessCheck.addEventListener('change', calculateEstimate);
+        permitPrepCheck.addEventListener('change', calculateEstimate);
+
+        const hardscapeMaterialSelect = document.getElementById('hardscapeMaterialSelect');
+        const patioAreaSlider = document.getElementById('patioAreaSlider');
+        const patioAreaDisplay = document.getElementById('patioAreaDisplay');
+        const retainingWallCheck = document.getElementById('retainingWallCheck');
+        const outdoorKitchenCheck = document.getElementById('outdoorKitchenCheck');
+
+        patioAreaSlider.addEventListener('input', (e) => {
+            patioAreaDisplay.textContent = e.target.value + ' sq ft';
+            calculateEstimate();
+        });
+        hardscapeMaterialSelect.addEventListener('change', calculateEstimate);
+        retainingWallCheck.addEventListener('change', calculateEstimate);
+        outdoorKitchenCheck.addEventListener('change', calculateEstimate);
+
+        const softscapeTierSelect = document.getElementById('softscapeTierSelect');
+        const mapleCountSlider = document.getElementById('mapleCountSlider');
+        const mapleCountDisplay = document.getElementById('mapleCountDisplay');
+        const irrigationCheck = document.getElementById('irrigationCheck');
+        const soilPrepCheck = document.getElementById('soilPrepCheck');
+
+        mapleCountSlider.addEventListener('input', (e) => {
+            mapleCountDisplay.textContent = e.target.value + (e.target.value === '1' ? ' Tree' : ' Trees');
+            calculateEstimate();
+        });
+        softscapeTierSelect.addEventListener('change', calculateEstimate);
+        irrigationCheck.addEventListener('change', calculateEstimate);
+        soilPrepCheck.addEventListener('change', calculateEstimate);
+
+        function calculateEstimate() {
+            let baseLow = 0;
+            let baseHigh = 0;
+            let primaryLabel = '';
+            let scaleLabel = '';
+            let permitLabel = 'BCC 20.20 Not Required';
+
+            if (currentEstimatorCategory === 'trees') {
+                const unitBase = parseFloat(treeSizeSelect.value);
+                const count = parseInt(treeCountSlider.value);
+                const crane = craneAccessCheck.checked ? 1800 : 0;
+                const permit = permitPrepCheck.checked ? 450 : 0;
+
+                baseLow = (unitBase * 0.75 * count) + crane + permit;
+                baseHigh = (unitBase * 1.35 * count) + crane + permit;
+
+                primaryLabel = treeSizeSelect.options[treeSizeSelect.selectedIndex].getAttribute('data-label');
+                scaleLabel = count + (count === 1 ? ' Tree' : ' Trees');
+                permitLabel = permitPrepCheck.checked ? 'Arborist BCC 20.20 Report Included' : 'Standard Non-Canopy Pruning';
+            } else if (currentEstimatorCategory === 'hardscape') {
+                const sqftRate = parseFloat(hardscapeMaterialSelect.value);
+                const area = parseInt(patioAreaSlider.value);
+                const wall = retainingWallCheck.checked ? 3200 : 0;
+                const kitchen = outdoorKitchenCheck.checked ? 16500 : 0;
+
+                baseLow = (sqftRate * area * 0.9) + wall + kitchen;
+                baseHigh = (sqftRate * area * 1.25) + wall + kitchen;
+
+                primaryLabel = hardscapeMaterialSelect.options[hardscapeMaterialSelect.selectedIndex].getAttribute('data-label');
+                scaleLabel = area + ' sq ft patio';
+                permitLabel = (wall > 0 ? 'Engineered Wall Drainage Plan' : 'Standard Excavation');
+            } else if (currentEstimatorCategory === 'softscape') {
+                const tierBase = parseFloat(softscapeTierSelect.value);
+                const maples = parseInt(mapleCountSlider.value) * 850;
+                const irrigation = irrigationCheck.checked ? 1450 : 0;
+                const soil = soilPrepCheck.checked ? 850 : 0;
+
+                baseLow = (tierBase * 0.95) + maples + irrigation + soil;
+                baseHigh = (tierBase * 1.3) + maples + irrigation + soil;
+
+                primaryLabel = softscapeTierSelect.options[softscapeTierSelect.selectedIndex].getAttribute('data-label');
+                scaleLabel = mapleCountSlider.value + ' Specimen Maples + Beds';
+                permitLabel = 'Bellevue Tree Replacement Replanting Ready';
+            }
+
+            const lowFormatted = '$' + Math.round(baseLow).toLocaleString();
+            const highFormatted = '$' + Math.round(baseHigh).toLocaleString();
+            document.getElementById('estimateRangeDisplay').textContent = lowFormatted + ' – ' + highFormatted;
+            document.getElementById('summaryPrimary').textContent = primaryLabel;
+            document.getElementById('summaryScale').textContent = scaleLabel;
+            document.getElementById('summaryPermit').textContent = permitLabel;
         }
 
-        document.querySelectorAll('.seasonal-filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.seasonal-filter-btn').forEach(b => b.classList.remove('active', 'border-forest-700', 'bg-forest-700', 'text-white'));
-                btn.classList.add('active', 'border-forest-700', 'bg-forest-700', 'text-white');
-                activeFilter = btn.getAttribute('data-filter');
-                renderSeasonalCards();
-            });
+        document.getElementById('estimatorLockBtn').addEventListener('click', () => {
+            const range = document.getElementById('estimateRangeDisplay').textContent;
+            const primary = document.getElementById('summaryPrimary').textContent;
+            openConsultModal(currentEstimatorCategory, `2026 Estimator Calculation: ${primary} | Estimated Range: ${range}`);
         });
 
-        // Potting Bar Selection Handlers
+        calculateEstimate();
+
+        // -------------------------------------------------------------
+        // Potting Bar Interactive Calculator
+        // -------------------------------------------------------------
+        let currentPotPrice = 36;
+        let currentPotName = 'Glazed Cylinder Set (S/3)';
+        let currentPlantPrice = 32;
+        let currentPlantName = '6" Monstera Deliciosa';
+        let currentServicePrice = 15;
+        let currentServiceName = 'Standard Bench Potting';
+
         document.querySelectorAll('.pot-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.pot-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById('receiptPotName').textContent = btn.getAttribute('data-name');
+                document.querySelectorAll('.pot-btn').forEach(b => {
+                    b.classList.remove('active', 'border-forest-600', 'bg-forest-50');
+                    b.classList.add('border-gray-200', 'bg-sand-50');
+                });
+                btn.classList.add('active', 'border-forest-600', 'bg-forest-50');
+                btn.classList.remove('border-gray-200', 'bg-sand-50');
+                currentPotPrice = parseFloat(btn.getAttribute('data-price'));
+                currentPotName = btn.getAttribute('data-name');
+                updatePottingReceipt();
             });
         });
 
         document.querySelectorAll('.plant-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.plant-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById('receiptPlantName').textContent = btn.getAttribute('data-name');
+                document.querySelectorAll('.plant-btn').forEach(b => {
+                    b.classList.remove('active', 'border-forest-600', 'bg-forest-50');
+                    b.classList.add('border-gray-200', 'bg-sand-50');
+                });
+                btn.classList.add('active', 'border-forest-600', 'bg-forest-50');
+                btn.classList.remove('border-gray-200', 'bg-sand-50');
+                currentPlantPrice = parseFloat(btn.getAttribute('data-price'));
+                currentPlantName = btn.getAttribute('data-name');
+                updatePottingReceipt();
             });
         });
 
-        renderSeasonalCards();
+        document.querySelectorAll('input[name="pottingService"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                currentServicePrice = parseFloat(e.target.value);
+                if (currentServicePrice === 15) currentServiceName = 'Standard Bench Potting';
+                else if (currentServicePrice === 25) currentServiceName = 'Deluxe Botanical Staging';
+                else currentServiceName = 'DIY / Take Unpotted';
+                updatePottingReceipt();
+            });
+        });
+
+        function updatePottingReceipt() {
+            let subtotal = currentPotPrice + currentPlantPrice;
+            const freeBadge = document.getElementById('freePottingBadge');
+
+            let appliedService = currentServicePrice;
+            if (subtotal >= 100 && currentServicePrice > 0) {
+                freeBadge.classList.remove('hidden');
+                appliedService = 0;
+            } else {
+                freeBadge.classList.add('hidden');
+            }
+
+            const tax = (subtotal + appliedService) * 0.103;
+            const total = subtotal + appliedService + tax;
+
+            document.getElementById('receiptPotName').textContent = currentPotName;
+            document.getElementById('receiptPotPrice').textContent = '$' + currentPotPrice.toFixed(2);
+            document.getElementById('receiptPlantName').textContent = currentPlantName;
+            document.getElementById('receiptPlantPrice').textContent = '$' + currentPlantPrice.toFixed(2);
+            document.getElementById('receiptServiceName').textContent = appliedService === 0 && subtotal >= 100 && currentServicePrice > 0 ? currentServiceName + ' (Free Promo)' : currentServiceName;
+            document.getElementById('receiptServicePrice').textContent = '$' + appliedService.toFixed(2);
+            document.getElementById('receiptTax').textContent = '$' + tax.toFixed(2);
+            document.getElementById('receiptTotal').textContent = '$' + total.toFixed(2);
+        }
+
+        document.getElementById('reservePottingBtn').addEventListener('click', () => {
+            const tot = document.getElementById('receiptTotal').textContent;
+            openConsultModal('potting', `Potting Bar Reservation: ${currentPotName} + ${currentPlantName} with ${currentServiceName}. Total: ${tot}`);
+        });
+
+        document.querySelectorAll('.holiday-deposit-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.getAttribute('data-item');
+                openConsultModal('holiday', `Holiday Pre-Order ($50 Deposit): ${item}`);
+            });
+        });
+    
+        // =========================================================================
+        // BELLEVUE NURSERY MODULAR SEASONAL PLANTS & ARRIVALS ENGINE
+        // Designed for zero-code, instant updates by Fai Lian & Zaylee
+        // =========================================================================
+
+        // Default Autumn Preset Data
+        const SEASONAL_PRESETS = {
+            fall: [
+                {
+                    id: 'fall-pansies',
+                    name: 'Autumn Pansies & Violas',
+                    botanical: 'Viola cornuta • Cold-Hardy Color',
+                    badge: '🍂 In Season Now',
+                    badgeColor: 'bg-amber-100 text-amber-800 border-amber-300',
+                    category: 'fall-color',
+                    price: '$14.99 / 6-Pack',
+                    care: 'Full / Part Sun • Keep Moist • Frost Tolerant',
+                    desc: 'Vibrant autumn purples, bronzes, and yellows that bloom straight through Puget Sound November chills into spring.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg',
+                    action: 'pickup'
+                },
+                {
+                    id: 'bloodgood-maple',
+                    name: 'Bloodgood Japanese Maple',
+                    botanical: 'Acer palmatum var. atropurpureum (7-Gallon)',
+                    badge: '🍁 Peak Fall Color',
+                    badgeColor: 'bg-red-100 text-red-800 border-red-300',
+                    category: 'trees',
+                    price: '$285.00',
+                    care: 'Morning Sun / Filtered Shade • Moist, Well-Drained Soil',
+                    desc: 'Stunning deep scarlet autumn canopy. Acclimatized for Eastside garden scale and eligible for "We Plant It For You".',
+                    image: 'https://images.unsplash.com/photo-1507290439931-a861b5a38200?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                },
+                {
+                    id: 'cascade-fiddle',
+                    name: 'Cascade Fiddle Leaf Fig',
+                    botanical: 'Ficus lyrata • Acclimatized (8" Nursery Pot)',
+                    badge: '🌿 Cascade Tropicals Drop',
+                    badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-300',
+                    category: 'tropicals',
+                    price: '$48.00',
+                    care: 'Bright Indirect Light • Water When Top 2" Dry',
+                    desc: 'Pest-inspected, healthy greenhouse specimen ready for living room elegance. Pair directly at our in-store Potting Bar.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/ezgif.com-gif-maker-7-scaled-square.jpg',
+                    action: 'potting'
+                },
+                {
+                    id: 'dutch-tulip-bulbs',
+                    name: 'Dutch Spring Flowering Bulbs',
+                    botanical: 'Tulipa & Narcissus • Netherland Bulb Co.',
+                    badge: '🍂 Plant Now for Spring',
+                    badgeColor: 'bg-purple-100 text-purple-800 border-purple-300',
+                    category: 'fall-color',
+                    price: '$18.50 / Bag (20 Bulbs)',
+                    care: 'Plant in October/November • Cold Hardy',
+                    desc: 'Premium Dutch import bulbs ready for autumn planting in King County soil. Spectacular April bloom guaranteed.',
+                    image: 'https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=800&q=80',
+                    action: 'pickup'
+                },
+                {
+                    id: 'italian-glazed-pot',
+                    name: 'Glazed Cylinder Ceramic Set',
+                    botanical: 'Washington Pottery Co. • High-Fired Cobalt (S/3)',
+                    badge: '🏺 Just Unpacked',
+                    badgeColor: 'bg-blue-100 text-blue-800 border-blue-300',
+                    category: 'pottery',
+                    price: '$36.00',
+                    care: 'Frost-Resistant High Fire • Built-in Saucer',
+                    desc: 'Thick-walled glazed ceramic engineered to prevent winter frost cracking. Fai frozen-price guarantee at $36.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/2022/11/ezgif.com-gif-maker-8.jpg',
+                    action: 'potting'
+                },
+                {
+                    id: 'autumn-conifer',
+                    name: 'Dwarf Hinoki Cypress',
+                    botanical: 'Chamaecyparis obtusa (3-Gallon)',
+                    badge: '🌲 Evergreen Architectural',
+                    badgeColor: 'bg-forest-100 text-forest-800 border-forest-300',
+                    category: 'trees',
+                    price: '$85.00',
+                    care: 'Full Sun to Part Shade • Evergreen Texture',
+                    desc: 'Graceful fan-shaped foliage providing sculptural emerald structure to Eastside courtyards and container groupings.',
+                    image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                }
+            ],
+            holiday: [
+                {
+                    id: 'holiday-noble-wreath',
+                    name: 'Hand-Tied Noble Fir Wreath (24")',
+                    botanical: 'Locally Harvested Abies procera',
+                    badge: '🎄 Holiday Signature',
+                    badgeColor: 'bg-red-100 text-red-800 border-red-300',
+                    category: 'fall-color',
+                    price: '$45.00',
+                    care: 'Outdoor Door / Porch • Mist Weekly',
+                    desc: 'Fresh Pacific Northwest noble fir, fragrant cedar tips, juniper berries, and real pine cones hand-crafted at our yard.',
+                    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80',
+                    action: 'pickup'
+                },
+                {
+                    id: 'winter-porch-pot',
+                    name: 'Classic Bellevue Porch Pot (18")',
+                    botanical: 'Noble Fir, Cedar & Birch Accents',
+                    badge: '⭐ Most Popular',
+                    badgeColor: 'bg-amber-100 text-amber-800 border-amber-300',
+                    category: 'fall-color',
+                    price: '$195.00 ($50 Deposit)',
+                    care: 'Outdoor Display • Lasts Through January',
+                    desc: 'Stunning architectural container display with tall white birch poles and red dogwood branches.',
+                    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+                    action: 'pickup'
+                },
+                {
+                    id: 'amaryllis-gift',
+                    name: 'Jumbo Dutch Amaryllis in Ceramic',
+                    botanical: 'Hippeastrum 'Red Lion' • Wax / Potted',
+                    badge: '🎁 Living Gift',
+                    badgeColor: 'bg-purple-100 text-purple-800 border-purple-300',
+                    category: 'tropicals',
+                    price: '$32.00',
+                    care: 'Bright Indoor Light • 6–8 Week Giant Blooms',
+                    desc: 'Giant double-flowering red amaryllis bulb potted in glazed artisan ceramic. Perfect seasonal holiday gift.',
+                    image: 'https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?auto=format&fit=crop&w=800&q=80',
+                    action: 'potting'
+                },
+                {
+                    id: 'noble-fir-tree',
+                    name: 'Fresh-Cut Washington Noble Fir',
+                    botanical: '7ft–8ft Grade-A Puget Sound Fir',
+                    badge: '🌲 Pre-Order Allocation',
+                    badgeColor: 'bg-forest-100 text-forest-800 border-forest-300',
+                    category: 'trees',
+                    price: '$95.00',
+                    care: 'Water Stand Conditioned Daily',
+                    desc: 'Hand-picked dense symmetrical boughs. Fresh cut on-site and loaded directly onto your vehicle by our team.',
+                    image: 'https://images.unsplash.com/photo-1543257580-7269da773bf5?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                }
+            ],
+            spring: [
+                {
+                    id: 'spring-hellebore',
+                    name: 'Winter Jewel Hellebores',
+                    botanical: 'Helleborus orientalis (Lenten Rose)',
+                    badge: '🌸 Early Spring Bloom',
+                    badgeColor: 'bg-pink-100 text-pink-800 border-pink-300',
+                    category: 'fall-color',
+                    price: '$24.99',
+                    care: 'Part to Full Shade • Evergreen Perennial',
+                    desc: 'Lush nodding blooms in deep plum, slate, and blush that flower when snow is still in the air. Slug-resistant.',
+                    image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80',
+                    action: 'pickup'
+                },
+                {
+                    id: 'spring-primrose',
+                    name: 'Pacific Northwest Primroses',
+                    botanical: 'Primula acaulis (4" Pots)',
+                    badge: '🌸 Bright Color Drops',
+                    badgeColor: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+                    category: 'fall-color',
+                    price: '$4.99 each',
+                    care: 'Morning Sun • Keep Consistently Moist',
+                    desc: 'Intense saturated neon colors that announce spring has arrived in Bellevue. Ideal for porch accents.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg',
+                    action: 'pickup'
+                },
+                {
+                    id: 'spring-rhody',
+                    name: 'Specimen Pacific Rhododendron',
+                    botanical: 'Rhododendron 'Cynthia' (5-Gallon)',
+                    badge: '🌺 Washington State Flower',
+                    badgeColor: 'bg-purple-100 text-purple-800 border-purple-300',
+                    category: 'trees',
+                    price: '$68.00',
+                    care: 'Acidic PNW Soil • Morning Sun / Filtered Shade',
+                    desc: 'Huge rosy-crimson trusses. Native soil-adapted and perfect for woodland shade gardens.',
+                    image: 'https://images.unsplash.com/photo-1507290439931-a861b5a38200?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                }
+            ],
+            summer: [
+                {
+                    id: 'summer-hydrangea',
+                    name: 'Endless Summer Hydrangea',
+                    botanical: 'Hydrangea macrophylla (5-Gallon)',
+                    badge: '☀️ Continuous Summer Blooms',
+                    badgeColor: 'bg-blue-100 text-blue-800 border-blue-300',
+                    category: 'trees',
+                    price: '$58.00',
+                    care: 'Morning Sun / Afternoon Shade • Generous Water',
+                    desc: 'Re-blooming mophead hydrangea with giant blue or pink blooms depending on soil pH. Bellevue summer classic.',
+                    image: 'https://images.unsplash.com/photo-1507290439931-a861b5a38200?auto=format&fit=crop&w=800&q=80',
+                    action: 'weplant'
+                },
+                {
+                    id: 'summer-patio-basket',
+                    name: 'Grand Sunburst Hanging Basket',
+                    botanical: 'Calibrachoa, Petunia & Trailing Verbena',
+                    badge: '⭐ Bellevue Nursery Signature',
+                    badgeColor: 'bg-amber-100 text-amber-800 border-amber-300',
+                    category: 'fall-color',
+                    price: '$65.00',
+                    care: 'Full Sun • Daily Summer Watering',
+                    desc: 'Massive trailing color grown right here in our greenhouse. Hummingbird magnet.',
+                    image: 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg',
+                    action: 'pickup'
+                }
+            ]
+        };
+
+        // Load active items from localStorage or fallback to Fall default
+        let activeSeasonalItems = [];
+        try {
+            const saved = localStorage.getItem('bn_seasonal_items');
+            if (saved) {
+                activeSeasonalItems = JSON.parse(saved);
+            } else {
+                activeSeasonalItems = [...SEASONAL_PRESETS.fall];
+            }
+        } catch (e) {
+            activeSeasonalItems = [...SEASONAL_PRESETS.fall];
+        }
+
+        let currentSeasonalFilter = 'all';
+        let editingCardIndex = -1;
+
+        // Render Cards in the Frontend Grid
+        function renderSeasonalGrid() {
+            const grid = document.getElementById('seasonalCardGrid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            const filtered = activeSeasonalItems.filter(item => {
+                if (currentSeasonalFilter === 'all') return true;
+                return item.category === currentSeasonalFilter;
+            });
+
+            document.getElementById('count-all').textContent = activeSeasonalItems.length;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 bg-white rounded-2xl border border-gray-200">
+                        <div class="text-3xl mb-2">🌿</div>
+                        <h4 class="font-serif text-lg font-bold text-forest-900">No items currently in this category</h4>
+                        <p class="text-xs text-gray-500 mt-1">Check back soon or ask our nursery team about custom orders.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-3xl overflow-hidden border border-gray-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1';
+                
+                let actionBtnHtml = '';
+                if (item.action === 'potting') {
+                    actionBtnHtml = `
+                        <button class="card-action-btn w-full bg-forest-700 hover:bg-forest-800 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5" data-action="potting" data-name="${item.name}" data-price="${item.price}">
+                            <span>🏺 Pair at Potting Bar</span>
+                            <span>&rarr;</span>
+                        </button>
+                    `;
+                } else if (item.action === 'weplant') {
+                    actionBtnHtml = `
+                        <button class="card-action-btn w-full bg-forest-800 hover:bg-forest-900 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5" data-action="weplant" data-name="${item.name}">
+                            <span>🌱 Installation &amp; Delivery</span>
+                            <span>&rarr;</span>
+                        </button>
+                    `;
+                } else {
+                    actionBtnHtml = `
+                        <button class="card-action-btn w-full bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5" data-action="pickup" data-name="${item.name}">
+                            <span>Reserve for Express Pickup</span>
+                            <span>&rarr;</span>
+                        </button>
+                    `;
+                }
+
+                card.innerHTML = `
+                    <div>
+                        <!-- Image Container with Badges -->
+                        <div class="relative h-56 sm:h-64 overflow-hidden bg-sand-200">
+                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3.5 left-3.5 flex flex-col gap-1.5 items-start">
+                                <span class="text-[11px] font-bold px-3 py-1 rounded-full shadow-sm border ${item.badgeColor || 'bg-amber-100 text-amber-900 border-amber-300'} backdrop-blur-md">
+                                    ${item.badge}
+                                </span>
+                            </div>
+
+                            <!-- Floating Price Tag -->
+                            <div class="absolute bottom-3.5 right-3.5 bg-white/95 backdrop-blur-md text-forest-900 font-serif font-bold text-sm px-3.5 py-1 rounded-xl shadow-md border border-gray-100">
+                                ${item.price}
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6">
+                            <div class="text-[11px] font-semibold text-terracotta-600 uppercase tracking-wider mb-1">${item.botanical}</div>
+                            <h3 class="font-serif text-xl font-bold text-forest-900 leading-snug mb-2 group-hover:text-forest-700 transition-colors">
+                                ${item.name}
+                            </h3>
+                            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                                ${item.desc}
+                            </p>
+
+                            <!-- Care Specs Micro-Tag -->
+                            <div class="bg-sand-50 p-2.5 rounded-xl border border-gray-100 flex items-center gap-2 text-[11px] text-forest-800">
+                                <span class="text-sm">🌿</span>
+                                <span class="font-medium truncate">${item.care}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Action -->
+                    <div class="p-6 pt-0">
+                        ${actionBtnHtml}
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+
+            // Bind Action Buttons on newly rendered cards
+            grid.querySelectorAll('.card-action-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const action = btn.getAttribute('data-action');
+                    const name = btn.getAttribute('data-name');
+                    if (action === 'potting') {
+                        document.querySelector('#potting-bar').scrollIntoView({ behavior: 'smooth' });
+                        showToast(`Selected "${name}" for Potting Bar!`);
+                    } else if (action === 'weplant') {
+                        openConsultModal('we-plant', `Inquiring about specimen installation for: ${name}`);
+                    } else {
+                        openConsultModal('potting', `Express Pickup Reservation: ${name}`);
+                    }
+                });
+            });
+        }
+
+        // Seasonal Filter Tabs
+        document.querySelectorAll('.seasonal-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.seasonal-filter-btn').forEach(b => {
+                    b.classList.remove('active', 'border-forest-700', 'bg-forest-700', 'text-white');
+                    b.classList.add('border-gray-200', 'bg-white', 'text-gray-700');
+                });
+                btn.classList.add('active', 'border-forest-700', 'bg-forest-700', 'text-white');
+                btn.classList.remove('border-gray-200', 'bg-white', 'text-gray-700');
+                currentSeasonalFilter = btn.getAttribute('data-filter');
+                renderSeasonalGrid();
+            });
+        });
+
+        // -------------------------------------------------------------
+        // STAFF QUICK SEASONAL PLANT UPDATER MODAL LOGIC
+        // -------------------------------------------------------------
+        const seasonalManagerModal = document.getElementById('seasonalManagerModal');
+        const openSeasonalManagerBtn = document.getElementById('openSeasonalManagerBtn');
+        const closeSeasonalModalBtn = document.getElementById('closeSeasonalModalBtn');
+        const closeManagerAndSaveBtn = document.getElementById('closeManagerAndSaveBtn');
+        const seasonPresetSelect = document.getElementById('seasonPresetSelect');
+        const applyPresetBtn = document.getElementById('applyPresetBtn');
+        const seasonalItemsList = document.getElementById('seasonalItemsList');
+        const cardEditFormContainer = document.getElementById('cardEditFormContainer');
+        const addNewCardBtn = document.getElementById('addNewCardBtn');
+        const cancelEditBtn = document.getElementById('cancelEditBtn');
+        const saveCardBtn = document.getElementById('saveCardBtn');
+        const resetDefaultsBtn = document.getElementById('resetDefaultsBtn');
+        const copyCodeBtn = document.getElementById('copyCodeBtn');
+
+        function openSeasonalManager() {
+            renderModalItemList();
+            cardEditFormContainer.classList.add('hidden');
+            seasonalManagerModal.classList.remove('hidden');
+        }
+
+        function closeSeasonalManager() {
+            seasonalManagerModal.classList.add('hidden');
+            renderSeasonalGrid();
+        }
+
+        if (openSeasonalManagerBtn) openSeasonalManagerBtn.addEventListener('click', openSeasonalManager);
+        if (closeSeasonalModalBtn) closeSeasonalModalBtn.addEventListener('click', closeSeasonalManager);
+        if (closeManagerAndSaveBtn) closeManagerAndSaveBtn.addEventListener('click', closeSeasonalManager);
+
+        seasonalManagerModal.addEventListener('click', (e) => {
+            if (e.target === seasonalManagerModal) closeSeasonalManager();
+        });
+
+        function renderModalItemList() {
+            document.getElementById('modalActiveCount').textContent = activeSeasonalItems.length;
+            seasonalItemsList.innerHTML = '';
+
+            activeSeasonalItems.forEach((item, index) => {
+                const row = document.createElement('div');
+                row.className = 'p-3 bg-white rounded-xl border border-gray-200 flex items-center justify-between gap-4 hover:border-forest-300 transition-colors';
+                row.innerHTML = `
+                    <div class="flex items-center gap-3 min-w-0">
+                        <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-lg object-cover bg-sand-200 shrink-0">
+                        <div class="min-w-0">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-xs text-forest-900 truncate">${item.name}</span>
+                                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${item.badgeColor || 'bg-amber-100 text-amber-800'} shrink-0">${item.badge}</span>
+                            </div>
+                            <div class="text-[11px] text-gray-500 truncate">${item.botanical} • <strong class="text-forest-800">${item.price}</strong></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button class="edit-item-btn text-xs font-bold text-forest-700 hover:text-forest-900 px-2.5 py-1 rounded bg-sand-100 hover:bg-sand-200 transition-colors" data-index="${index}">
+                            Edit
+                        </button>
+                        <button class="delete-item-btn text-xs font-bold text-red-600 hover:text-red-800 px-2.5 py-1 rounded hover:bg-red-50 transition-colors" data-index="${index}">
+                            &times;
+                        </button>
+                    </div>
+                `;
+                seasonalItemsList.appendChild(row);
+            });
+
+            // Bind Edit & Delete buttons
+            seasonalItemsList.querySelectorAll('.edit-item-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = parseInt(btn.getAttribute('data-index'));
+                    startEditingCard(idx);
+                });
+            });
+
+            seasonalItemsList.querySelectorAll('.delete-item-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = parseInt(btn.getAttribute('data-index'));
+                    if (confirm(`Remove "${activeSeasonalItems[idx].name}" from seasonal showcase?`)) {
+                        activeSeasonalItems.splice(idx, 1);
+                        saveActiveItems();
+                        renderModalItemList();
+                        renderSeasonalGrid();
+                    }
+                });
+            });
+        }
+
+        function startEditingCard(index) {
+            editingCardIndex = index;
+            cardEditFormContainer.classList.remove('hidden');
+
+            if (index >= 0) {
+                const item = activeSeasonalItems[index];
+                document.getElementById('editFormTitle').textContent = `Edit "${item.name}"`;
+                document.getElementById('editCardName').value = item.name;
+                document.getElementById('editCardBotanical').value = item.botanical;
+                document.getElementById('editCardBadge').value = item.badge;
+                document.getElementById('editCardCategory').value = item.category;
+                document.getElementById('editCardPrice').value = item.price;
+                document.getElementById('editCardCare').value = item.care;
+                document.getElementById('editCardAction').value = item.action || 'pickup';
+                document.getElementById('editCardDesc').value = item.desc;
+                document.getElementById('editCardImage').value = item.image;
+            } else {
+                document.getElementById('editFormTitle').textContent = 'Add New Seasonal Plant / Product';
+                document.getElementById('editCardName').value = '';
+                document.getElementById('editCardBotanical').value = '';
+                document.getElementById('editCardBadge').value = '🍂 In Season Now';
+                document.getElementById('editCardCategory').value = 'fall-color';
+                document.getElementById('editCardPrice').value = '$24.00';
+                document.getElementById('editCardCare').value = 'Part Sun • Keep Moist';
+                document.getElementById('editCardAction').value = 'pickup';
+                document.getElementById('editCardDesc').value = 'Fresh Pacific Northwest arrival acclimatized for Eastside home gardens.';
+                document.getElementById('editCardImage').value = 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg';
+            }
+
+            cardEditFormContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        addNewCardBtn.addEventListener('click', () => startEditingCard(-1));
+        cancelEditBtn.addEventListener('click', () => cardEditFormContainer.classList.add('hidden'));
+
+        saveCardBtn.addEventListener('click', () => {
+            const name = document.getElementById('editCardName').value.trim();
+            if (!name) {
+                alert('Please enter a plant or product name.');
+                return;
+            }
+
+            const badge = document.getElementById('editCardBadge').value;
+            let badgeColor = 'bg-amber-100 text-amber-800 border-amber-300';
+            if (badge.includes('Tropicals')) badgeColor = 'bg-emerald-100 text-emerald-800 border-emerald-300';
+            else if (badge.includes('Color') || badge.includes('Peak')) badgeColor = 'bg-red-100 text-red-800 border-red-300';
+            else if (badge.includes('Import') || badge.includes('Unpacked')) badgeColor = 'bg-blue-100 text-blue-800 border-blue-300';
+            else if (badge.includes('Spring') || badge.includes('Bloom')) badgeColor = 'bg-pink-100 text-pink-800 border-pink-300';
+            else if (badge.includes('Holiday')) badgeColor = 'bg-emerald-100 text-emerald-900 border-emerald-400';
+
+            const cardData = {
+                id: 'custom-' + Date.now(),
+                name: name,
+                botanical: document.getElementById('editCardBotanical').value.trim() || 'Bellevue Nursery Curated',
+                badge: badge,
+                badgeColor: badgeColor,
+                category: document.getElementById('editCardCategory').value,
+                price: document.getElementById('editCardPrice').value.trim() || '$0.00',
+                care: document.getElementById('editCardCare').value.trim() || 'Inquire with Nursery Horticulturist',
+                desc: document.getElementById('editCardDesc').value.trim() || 'Available now at our 842 104th Ave SE nursery greenhouse.',
+                image: document.getElementById('editCardImage').value.trim() || 'https://bellevuenursery.com/wp-content/uploads/bb-plugin/cache/Fall-2023-square.jpg',
+                action: document.getElementById('editCardAction').value
+            };
+
+            if (editingCardIndex >= 0) {
+                activeSeasonalItems[editingCardIndex] = cardData;
+            } else {
+                activeSeasonalItems.unshift(cardData);
+            }
+
+            saveActiveItems();
+            cardEditFormContainer.classList.add('hidden');
+            renderModalItemList();
+            renderSeasonalGrid();
+            showToast(`Saved "${cardData.name}" to seasonal showcase!`);
+        });
+
+        // Apply 1-Click Preset
+        applyPresetBtn.addEventListener('click', () => {
+            const presetKey = seasonPresetSelect.value;
+            if (SEASONAL_PRESETS[presetKey]) {
+                activeSeasonalItems = [...SEASONAL_PRESETS[presetKey]];
+                saveActiveItems();
+                renderModalItemList();
+                renderSeasonalGrid();
+                
+                const labels = {
+                    fall: 'Late Fall & Pre-Winter',
+                    holiday: 'Holiday Wreaths & Evergreens',
+                    spring: 'Early Spring Awakening',
+                    summer: 'Summer Color & Baskets'
+                };
+                document.getElementById('activeSeasonLabel').textContent = labels[presetKey] || 'Custom Rotation';
+                showToast(`Applied ${labels[presetKey]} preset!`);
+            }
+        });
+
+        // Reset Defaults
+        resetDefaultsBtn.addEventListener('click', () => {
+            if (confirm('Reset seasonal showcase back to original late fall defaults?')) {
+                activeSeasonalItems = [...SEASONAL_PRESETS.fall];
+                saveActiveItems();
+                renderModalItemList();
+                renderSeasonalGrid();
+                document.getElementById('activeSeasonLabel').textContent = 'Late Fall & Pre-Winter';
+                showToast('Reset to default late fall catalog.');
+            }
+        });
+
+        // Copy Code for Ken
+        copyCodeBtn.addEventListener('click', () => {
+            const jsonStr = JSON.stringify(activeSeasonalItems, null, 4);
+            navigator.clipboard.writeText(jsonStr).then(() => {
+                showToast('Copied JSON data to clipboard! Ready to paste for Ken.');
+            }).catch(() => {
+                prompt('Copy this updated JSON array for Ken:', jsonStr);
+            });
+        });
+
+        function saveActiveItems() {
+            try {
+                localStorage.setItem('bn_seasonal_items', JSON.stringify(activeSeasonalItems));
+            } catch (e) {
+                console.warn('Could not save to localStorage', e);
+            }
+        }
+
+        // Initial Grid Render on Page Load
+        renderSeasonalGrid();
+
     </script>
 </body>
 </html>
